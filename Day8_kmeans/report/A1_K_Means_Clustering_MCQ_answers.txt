@@ -1,0 +1,65 @@
+A1: K-Means Clustering - MCQ Answers
+====================================
+
+Source: A1 MCQ k means.docx
+Date: 2026-09-18
+
+1. What is the primary objective of the K-Means clustering algorithm?
+   → B) Minimize the within-cluster sum of squared distances
+
+2. Which type of learning does K-Means represent?
+   → C) Unsupervised learning
+
+3. In K-Means, what does the parameter K represent?
+   → C) Number of clusters
+
+4. Which of the following is the usual sequence of steps in K-Means?
+   → A) Initialize centroids → Assign points → Update centroids → Repeat
+
+5. In the standard K-Means algorithm, a data point is assigned to:
+   → B) The nearest centroid
+
+6. Which distance metric is most commonly associated with standard K-Means?
+   → B) Euclidean distance
+
+7. What happens to a centroid during the update step of K-Means?
+   → B) It is moved to the mean of the points assigned to that cluster
+
+8. Consider the one-dimensional points {2, 4, 6} assigned to a single cluster. What will be the new centroid?
+   → B) 4
+
+9. Suppose a cluster contains points (1,2), (3,4), and (5,6). What is its centroid?
+   → A) (2,3)
+
+10. Which of the following can cause K-Means to produce different results when run multiple times?
+    → A) Random initialization of centroids
+
+11. Why is feature scaling often important before applying K-Means?
+    → B) Features with larger scales can dominate the distance calculation
+
+12. Consider two points P(2,3) and Q(5,7). What is their Euclidean distance?
+    → B) 5
+
+13. If the value of K is increased from 3 to 5, what generally happens to the K-Means objective function (within-cluster SSE)?
+    → B) It generally decreases or remains the same
+
+14. Which method is commonly used to help determine an appropriate value of K?
+    → A) Elbow method
+
+15. In the Elbow Method, what is plotted against K?
+    → C) Within-cluster sum of squared errors
+
+16. A major limitation of K-Means is that it:
+    → B) Requires the number of clusters to be specified in advance
+
+17. Which type of cluster structure is K-Means generally most suitable for?
+    → A) Approximately spherical and similarly sized clusters
+
+18. Suppose K-Means converges to a solution. Which statement is TRUE?
+    → B) It has reached a stable solution under the chosen initialization
+
+19. Why can K-Means be sensitive to outliers?
+    → A) Centroids are calculated using the mean
+
+20. Suppose two centroids are C₁=(1,1) and C₂=(10,10), and a point is P=(2,3). To which cluster will P be assigned?
+    → A) Cluster 1

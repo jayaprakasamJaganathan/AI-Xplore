@@ -1,0 +1,65 @@
+A4: Understanding Linear Discriminant Analysis - Answers
+========================================================
+
+Source: A4 Understanding Linear Discriminant Analysis.pdf
+Date: 2026-09-06
+
+1.  LDA may perform poorly when:
+    → C) Classes have significant nonlinear boundaries
+
+2.  Which assumption of LDA is often violated in real-world datasets?
+    → A) Equal covariance matrices across classes
+
+3.  LDA can struggle when:
+    → B) The number of features exceeds the number of samples
+
+4.  Why can LDA be sensitive to outliers?
+    → A) It uses class means and covariance estimates
+
+5.  Which of the following is a limitation of LDA?
+    → D) All of the above
+
+6.  When class covariance matrices are substantially different, which method may outperform LDA?
+    → A) Quadratic Discriminant Analysis (QDA)
+
+7.  LDA assumes that class boundaries are:
+    → A) Linear
+
+8.  What problem arises when the within-class scatter matrix Sw is singular?
+    → B) Matrix inversion becomes difficult or impossible
+
+9.  LDA may not effectively separate classes when:
+    → B) The classes overlap heavily
+
+10. In high-dimensional datasets with few samples, LDA often suffers from:
+    → A) Overfitting and unstable covariance estimates
+
+11. Which data characteristic can negatively impact LDA performance?
+    → D) All of the above
+
+12. LDA is generally less suitable than kernel-based methods when:
+    → B) Data contains nonlinear class structures
+
+13. A major limitation of LDA compared to PCA is that:
+    → A) It requires class labels
+
+14. Why might class imbalance affect LDA?
+    → A) Larger classes can dominate mean and covariance estimation
+
+15. For a dataset with C classes, a limitation of LDA is that the maximum number of discriminant components is:
+    → C) C−1
+
+16. Which statement best describes a limitation of classical LDA?
+    → A) It assumes a common covariance structure across all classes
+
+17. LDA may produce suboptimal results when:
+    → A) Feature distributions deviate significantly from normality
+
+18. Which of the following is known as the "small sample size problem" in LDA?
+    → B) Too many features compared to samples
+
+19. LDA cannot extract more than C−1 discriminant features because:
+    → A) The rank of the between-class scatter matrix is limited
+
+20. Which scenario is most likely to violate LDA assumptions?
+    → B) Multiple classes with highly nonlinear boundaries and unequal covariances

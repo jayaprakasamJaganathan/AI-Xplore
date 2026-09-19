@@ -1,0 +1,122 @@
+A1: Linear Discriminant Analysis - Answers
+===========================================
+
+1.  What is the primary objective of Linear Discriminant Analysis (LDA)?
+    → B) Maximize class separability
+
+2.  LDA is primarily used for:
+    → C) Dimensionality Reduction and Classification
+
+3.  Which matrices are central to the formulation of LDA?
+    → B) Within-Class Scatter and Between-Class Scatter Matrices
+
+4.  The within-class scatter matrix represents:
+    → B) Variance of samples within each class
+
+5.  The between-class scatter matrix measures:
+    → B) Separation among class means
+
+6.  LDA seeks projection directions that:
+    → C) Maximize between-class variance while minimizing within-class variance
+
+7.  For a dataset with C classes, the maximum number of LDA components is:
+    → C) C − 1
+
+8.  Which of the following is an assumption of classical LDA?
+    → A) Classes have identical covariance matrices
+
+9.  LDA is a supervised technique because:
+    → B) It requires class labels
+
+10. In LDA, eigenvectors are obtained from:
+    → C) Sw⁻¹Sb
+
+11. Compared to PCA, LDA:
+    → C) Uses class information
+
+12. Which criterion is maximized in Fisher's Linear Discriminant?
+    → C) Between-Class Scatter to Within-Class Scatter Ratio
+
+13. LDA assumes data from each class follows:
+    → C) Gaussian Distribution
+
+14. If there are two classes, the maximum number of discriminant components is:
+    → B) 1
+
+15. Which statement best differentiates PCA and LDA?
+    → B) PCA maximizes variance; LDA maximizes class separability
+
+16. What happens if class labels are randomly shuffled before applying LDA?
+    → A) Performance generally degrades
+
+17. Which matrix must generally be invertible in standard LDA?
+    → B) Within-Class Scatter Matrix
+
+18. LDA projects data onto:
+    → C) Directions maximizing discrimination among classes
+
+19. In pattern recognition, LDA is often applied:
+    → A) Before classification
+
+20. Which of the following can be a limitation of LDA?
+    → D) All of the above
+
+21. LDA can be viewed as:
+    → D) All of the above
+
+22. The rank of the between-class scatter matrix is at most:
+    → C) Number of Classes Minus One
+
+23. Which application commonly uses LDA?
+    → D) All of the above
+
+24. In Fisher's criterion, a good projection should:
+    → C) Separate class means and reduce class spread
+
+25. LDA is most effective when:
+    → A) Classes are well separated
+
+26. Which of the following affects LDA performance?
+    → D) All of the above
+
+27. The generalized eigenvalue problem in LDA is solved to obtain:
+    → C) Discriminant Directions
+
+28. LDA is likely to perform poorly when:
+    → B) Covariance assumptions are heavily violated
+
+29. Which quantity is minimized in the denominator of Fisher's criterion?
+    → B) Within-Class Scatter
+
+30. In multiclass classification, LDA creates:
+    → B) Multiple discriminant axes up to C−1
+
+31. LDA is particularly useful when:
+    → B) Feature reduction is needed before classification
+
+32. Which assumption is shared by many LDA formulations?
+    → B) Equal covariance matrices across classes
+
+33. The output of LDA is typically:
+    → B) Reduced-Dimensional Feature Vectors
+
+34. Why is LDA often preferred over PCA for classification tasks?
+    → B) It uses label information
+
+35. If there are 5 classes in a dataset, the maximum number of discriminant vectors produced by LDA is:
+    → B) 4
+
+36. Which type of learning does LDA belong to?
+    → A) Supervised Learning
+
+37. What role do class means play in LDA?
+    → B) Used to compute between-class scatter
+
+38. Which of the following is true about LDA decision boundaries?
+    → B) Typically linear
+
+39. LDA can suffer from the "small sample size" problem when:
+    → A) Number of samples is much smaller than number of features
+
+40. Which statement about LDA is correct?
+    → C) It seeks projections that improve class discrimination

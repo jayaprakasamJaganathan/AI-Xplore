@@ -1,0 +1,18 @@
+A3: LDA Implementation - Answers
+================================
+
+Source: A3 LDA IMPLEMENTATION.pdf
+Date: 2026-09-06
+
+Correct Implementation Order (7 Steps):
+
+1.  Compute class-wise means and overall mean
+2.  Construct Within-Class Scatter Matrix (Sw)
+3.  Construct Between-Class Scatter Matrix (Sb)
+4.  Solve generalized eigenvalue problem for Sw⁻¹Sb
+5.  Select top k discriminant vectors (largest eigenvalues)
+6.  Project dataset onto new subspace
+7.  Visualize transformed data
+
+Note: This document contains the implementation steps rather than MCQs.
+The practical implementation is in code/lda_from_scratch.py

@@ -1,0 +1,68 @@
+A5: K-Nearest Neighbors (KNN) - MCQ Answers
+============================================
+
+Source: A5 KNN MCQ.docx
+Date: 2026-09-18
+
+1. KNN is primarily considered a:
+   → A) Supervised learning algorithm
+
+2. What does the value K represent in KNN?
+   → C) Number of nearest neighbors considered
+
+3. KNN is commonly referred to as a:
+   → B) Lazy learning algorithm
+
+4. Why is KNN called a lazy learner?
+   → B) It postpones most computation until prediction time
+
+5. Which distance measure is most commonly used with KNN for continuous numerical features?
+   → A) Euclidean distance
+
+6. Suppose K=5 in a KNN classification problem. What does the algorithm do for a new sample?
+   → B) Considers the 5 nearest training samples
+
+7. In KNN classification, the predicted class is generally determined by:
+   → B) Majority vote among the nearest neighbors
+
+8. Consider K=3. The three nearest neighbors of a test point belong to classes: A, A, B. What class will standard KNN predict?
+   → A) A
+
+9. What is a major reason for normalizing or standardizing features before applying KNN?
+   → B) Features with larger scales can dominate distance calculations
+
+10. If K=1, a KNN classifier:
+    → B) Uses only the nearest training sample
+
+11. What is likely to happen if K is chosen to be extremely small, such as K=1?
+    → A) The model may become sensitive to noise and outliers
+
+12. What is likely to happen if K is chosen to be very large?
+    → B) The model may become overly influenced by the overall class distribution
+
+13. Which statement about KNN training is MOST accurate?
+    → B) KNN generally stores the training data and performs computation during prediction
+
+14. Consider two features:
+    Age: 20–80
+    Annual income: 20,000–2,000,000
+    When using Euclidean distance in KNN without scaling, what is the likely issue?
+    → B) Income may dominate the distance
+
+15. A KNN classifier achieves 100% training accuracy but poor test accuracy. Which is the MOST likely explanation?
+    → B) Overfitting
+
+16. Which change would generally make a KNN model more sensitive to local variations in the training data?
+    → B) Decreasing K
+
+17. A new data point is equally distant from two neighbors belonging to different classes. What issue can arise?
+    → B) A tie may occur during voting
+
+18. Which statement about KNN and dimensionality is TRUE?
+    → B) KNN can suffer from the curse of dimensionality
+
+19. Suppose the five nearest neighbors of a test sample have labels: A, A, B, B, B. If K=5, what will standard majority-vote KNN predict?
+    → B) B
+
+20. Tricky: Suppose K=1 gives 95% training accuracy and 80% test accuracy, while K=5 gives 88% training accuracy and 90% test accuracy. Which statement is MOST reasonable?
+    → B) K=5 may generalize better to unseen data

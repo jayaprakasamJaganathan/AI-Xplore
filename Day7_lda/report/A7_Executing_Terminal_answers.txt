@@ -1,0 +1,111 @@
+A7: Executing through Terminal - Answers
+========================================
+
+Source: A7 Executing through Terminal.pdf
+Date: 2026-09-06
+
+--- MCQ Answers (20 Questions) ---
+
+1.  Which command is commonly used to execute a Python file named program.py from the terminal?
+    → B) python program.py
+
+2.  On systems where python points to Python 2 or is unavailable, which command is commonly used to run a Python 3 program?
+    → A) python3 program.py
+
+3.  Consider the following Python file named hello.py:
+    print("Hello World")
+    What command should be used to execute it from the terminal?
+    → B) python hello.py
+
+4.  What does the following command do?
+    python test.py
+    → C) Executes test.py using Python
+
+5.  A Python file is located at:
+    C:\Projects\ML\model.py
+    Which command can execute it from the terminal?
+    → A) python C:\Projects\ML\model.py
+
+6.  What is the purpose of the cd command in a terminal?
+    → C) Change the current directory
+
+7.  Suppose the terminal is currently in:
+    C:\Users\Student
+    and the Python file is located in:
+    C:\Users\Student\Projects
+    Which command can be used to move into the Projects directory?
+    → A) cd Projects
+
+8.  Consider the following sequence of commands:
+    cd Documents
+    python program.py
+    What does the second command assume?
+    → A) program.py exists in the Documents directory
+
+9.  What is the purpose of the command:
+    python --version
+    → B) Display the installed Python version
+
+10. Which command starts Python's interactive interpreter in a terminal?
+    → A) python
+
+11. If the terminal displays:
+    >>>
+    what does this generally indicate?
+    → A) Python is waiting for interactive input
+
+12. What will happen when the following command is executed?
+    python
+    → B) The Python interactive interpreter starts
+
+13. Which command exits the Python interactive interpreter?
+    → A) exit()
+
+14. Consider a file:
+    # calculator.py
+    a = 10
+    b = 20
+    print(a + b)
+    What will be displayed after executing:
+    python calculator.py
+    → C) 30
+
+15. What is the likely reason for the error:
+    python: can't open file 'program.py'
+    → B) The file cannot be found at the specified location
+
+16. A student runs:
+    python program.py
+    and gets:
+    'python' is not recognized as an internal or external command
+    What is a likely cause?
+    → A) The Python interpreter is not installed or is not available in PATH
+
+17. Which command can be used to install a Python package from the terminal?
+    → B) pip install numpy
+
+18. Which command can execute a Python module from the terminal?
+    → A) python -m module_name
+
+19. Consider a Python program requiring a command-line argument:
+    import sys
+    print(sys.argv[1])
+    Which command correctly executes it with the argument Hello?
+    → B) python program.py Hello
+
+20. What will sys.argv[0] generally contain when a Python script is executed from the terminal?
+    → C) The script name/path
+
+--- Practical Task ---
+Implemented in code/terminal_calculator.py
+
+Create calculator.py with:
+- add(a, b) - returns a + b
+- subtract(a, b) - returns a - b
+- multiply(a, b) - returns a * b
+- divide(a, b) - returns a / b (handles division by zero)
+
+Program should:
+- Accept two numbers from user
+- Display results of all four operations
+- Execute via: python terminal_calculator.py

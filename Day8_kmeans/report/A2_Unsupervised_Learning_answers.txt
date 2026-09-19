@@ -1,0 +1,67 @@
+A2: Unsupervised Learning - MCQ Answers
+=======================================
+
+Source: A2 MCQ unsupervised Learning.docx
+Date: 2026-09-18
+
+1. A clustering algorithm produces clusters, but the resulting clusters do not correspond to any meaningful real-world groups. What is the BEST conclusion?
+   → C) Clustering does not guarantee meaningful semantic groups
+
+2. Which statement about unsupervised learning is TRUE?
+   → B) It discovers patterns or structure without predefined target labels
+
+3. A dataset contains 1000 customers and 20 features, but no labels. You apply K-Means with K=4. What does K-Means actually learn?
+   → C) Four groups based on similarity according to the chosen representation and distance
+
+4. An unsupervised algorithm identifies three clusters. Can we conclude that the dataset naturally contains exactly three groups?
+   → B) No
+
+5. Which statement is MOST accurate about clustering and classification?
+   → C) Classification uses known target labels, while clustering generally does not
+
+6. A clustering algorithm gives different cluster assignments every time it runs. Which is the MOST likely explanation?
+   → B) Random initialization or stochastic optimization may be involved
+
+7. Consider the following statement:
+"Since K-Means minimizes SSE, the solution with the smallest SSE is always the most meaningful clustering."
+What is wrong with this statement?
+   → C) A lower SSE does not necessarily imply more meaningful or useful clusters
+
+8. Suppose K-Means produces an SSE of 100 for K=3 and 50 for K=6. Can we conclude that K=6 is better?
+   → B) No, because SSE generally decreases as K increases
+
+9. Why is the Elbow Method used in clustering?
+   → B) To identify a point where increasing K provides diminishing improvement
+
+10. A dataset contains two well-separated groups, but one group is much larger than the other. Which statement is TRUE?
+    → B) Cluster size imbalance can affect the resulting K-Means solution
+
+11. PCA is applied before clustering. Which statement is TRUE?
+    → C) PCA may remove dimensions that contain useful clustering information
+
+12. A clustering algorithm produces very compact clusters. Does this necessarily mean the clustering is good?
+    → B) No; clusters should also be sufficiently separated and meaningful
+
+13. Which situation is LEAST suitable for standard K-Means?
+    → C) Clusters with strongly non-spherical shapes
+
+14. Suppose all features are measured in different units, such as age in years and income in lakhs. You directly apply K-Means. What is the primary concern?
+    → B) Income may dominate the distance calculation
+
+15. Which statement about outliers in K-Means is MOST accurate?
+    → B) Outliers can significantly shift centroids
+
+16. A clustering algorithm assigns every point to exactly one cluster. Which assumption does this describe?
+    → A) Hard clustering
+
+17. In soft clustering, a data point can:
+    → A) Belong to multiple clusters with different degrees of membership
+
+18. A researcher clusters patients using their medical measurements and then observes that one cluster has a high disease rate. Can the researcher immediately claim that clustering discovered a disease category?
+    → B) No; the association should be evaluated and validated independently
+
+19. Which statement about unsupervised learning is FALSE?
+    → C) It always discovers objectively correct groups
+
+20. A clustering algorithm perfectly separates the dataset into two groups. However, after changing the feature scaling, the clustering changes completely. What does this MOST strongly indicate?
+    → B) The clustering is dependent on the representation and distance metric

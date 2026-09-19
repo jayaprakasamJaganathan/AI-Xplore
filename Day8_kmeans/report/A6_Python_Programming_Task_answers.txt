@@ -1,0 +1,102 @@
+A6: Python Programming Task - Solutions
+=======================================
+
+Source: A6 Python Programming Task.docx
+Date: 2026-09-18
+
+Task: Implement the following machine learning algorithms from scratch using Python:
+a) K-Means Clustering
+b) Linear Discriminant Analysis (LDA)
+
+For both algorithms:
+- Use a suitable dataset
+- Do not use the corresponding machine-learning library implementation
+- Display/visualize the final results
+- Clearly explain the major steps in your Python implementation
+
+====================================================================
+SOLUTION: K-Means Clustering from Scratch
+====================================================================
+
+File: code/functions_modularity.py (class KMeansFromScratch)
+
+Major Steps:
+1. **Centroid Initialization**: Randomly select K data points as initial centroids
+2. **Distance Calculation**: Compute Euclidean distance from each point to each centroid
+3. **Cluster Assignment**: Assign each point to the nearest centroid
+4. **Centroid Update**: Recalculate centroids as the mean of assigned points
+5. **Iteration**: Repeat steps 2-4 until convergence (centroids don't change) or max iterations reached
+6. **Inertia Calculation**: Compute within-cluster sum of squared distances
+
+Key Implementation Details:
+- Uses NumPy for vectorized operations
+- Handles empty clusters by reinitializing with random data point
+- Uses np.allclose() for convergence checking
+- Random state for reproducibility
+
+Visualization: Generated kmeans_k2.png, kmeans_k3.png, kmeans_k4.png showing clusters and centroids
+Elbow Method: Generated elbow_method.png for optimal K selection
+
+====================================================================
+SOLUTION: Linear Discriminant Analysis (LDA) from Scratch
+====================================================================
+
+File: code/functions_modularity.py (class LDAFromScratch)
+
+Major Steps:
+1. **Compute Class Means**: Calculate mean vector for each class
+2. **Overall Mean**: Calculate global mean across all samples
+3. **Within-Class Scatter Matrix (Sw)**: Sum of covariance matrices within each class
+   Sw = Σᵢ Σₓ∈Cᵢ (x - μᵢ)(x - μᵢ)ᵀ
+4. **Between-Class Scatter Matrix (Sb)**: Weighted sum of outer products of class mean differences
+   Sb = Σᵢ nᵢ (μᵢ - μ)(μᵢ - μ)ᵀ
+5. **Generalized Eigenvalue Problem**: Solve Sw⁻¹Sb v = λv
+   - Use pseudo-inverse (np.linalg.pinv) for numerical stability
+6. **Select Discriminant Components**: Sort eigenvectors by eigenvalues (descending), select top k
+7. **Projection**: Transform data X_lda = X @ W where W contains selected eigenvectors
+
+Key Implementation Details:
+- Maximum components = C-1 (where C = number of classes)
+- Handles singular Sw matrix using pseudo-inverse
+- Standardizes features before LDA (critical for performance)
+
+Visualization: Generated lda_projection.png showing 2D LDA projection
+
+====================================================================
+COMPARISON WITH SKLEARN
+====================================================================
+
+K-Means Comparison:
+- Sklearn inertia: 1296.96
+- Scratch inertia: 1296.96
+- Results match exactly (same random_state)
+
+LDA Comparison:
+- Sklearn LDA shape: (200, 2)
+- Scratch LDA shape: (200, 2)
+- Both produce 2D projections from 4D data
+
+====================================================================
+DATASETS USED
+====================================================================
+
+1. K-Means: make_blobs(n_samples=300, centers=3, n_features=2, cluster_std=1.5)
+2. LDA: make_blobs(n_samples=200, centers=3, n_features=4, cluster_std=1.5)
+   - Standardized using StandardScaler before LDA
+
+====================================================================
+OUTPUT FILES GENERATED
+====================================================================
+
+Visualizations (in output/):
+- kmeans_k2.png: K-Means with K=2
+- kmeans_k3.png: K-Means with K=3
+- kmeans_k4.png: K-Means with K=4
+- elbow_method.png: Elbow method for optimal K
+- lda_projection.png: LDA 2D projection
+
+Code Files (in code/):
+- kmeans_from_scratch.py: Standalone K-Means implementation
+- kmeans_vs_pca_comparison.py: K-Means vs PCA comparison
+- functions_modularity.py: Combined K-Means & LDA with all practical exercises
+- terminal_calculator.py: Terminal-based calculator

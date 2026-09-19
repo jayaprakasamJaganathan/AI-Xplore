@@ -1,0 +1,69 @@
+A4: Bayes Learning - MCQ Answers
+================================
+
+Source: A4 Bayes Learning.docx
+Date: 2026-09-18
+
+1. Which theorem forms the mathematical foundation of Bayes Learning?
+   → B) Bayes' Theorem
+
+2. Which of the following correctly represents Bayes' theorem?
+   → B) P(A|B) = P(B|A)P(A) / P(B)
+
+3. In Bayes' theorem, P(A|B) is referred to as:
+   → B) Posterior
+
+4. What does P(B|A) represent?
+   → A) Probability of B given A
+
+5. What does P(A) represent in Bayes' theorem?
+   → A) Prior probability
+
+6. A classifier chooses the class having the highest posterior probability. Which principle is it using?
+   → B) Maximum A Posteriori estimation
+
+7. Suppose P(A)=0.5, P(B)=0.4, and P(B|A)=0.2. What is P(A|B)?
+   → C) 0.25
+   Calculation: P(A|B) = P(B|A)P(A)/P(B) = 0.2 * 0.5 / 0.4 = 0.25
+
+8. A disease occurs in 1% of a population. A diagnostic test has a sensitivity of 90% and a false-positive rate of 5%. If a randomly selected person tests positive, which factor is most important when determining the probability that the person actually has the disease?
+   → C) The disease prevalence as well as the test characteristics
+
+9. Why can a highly accurate diagnostic test still have a relatively low positive predictive value?
+   → A) The prior probability of the disease may be very low
+
+10. Which of the following best describes Bayesian learning?
+    → B) Updating prior beliefs using observed evidence
+
+11. In Bayesian learning, what happens to the posterior probability when new evidence becomes available?
+    → B) It is updated based on the evidence
+
+12. Which statement correctly distinguishes prior and posterior probability?
+    → C) Prior represents belief before evidence; posterior represents updated belief after evidence
+
+13. In Naive Bayes classification, the "naive" assumption is that:
+    → B) Features are conditionally independent given the class
+
+14. A Naive Bayes classifier receives three features for a sample. Under its standard assumption, it treats these features as:
+    → A) Conditionally independent given the class
+
+15. Which of the following is a potential problem with Naive Bayes?
+    → B) Its conditional-independence assumption may not hold in real-world data
+
+16. Suppose two classes have identical likelihoods for a particular observation, but their prior probabilities are different. Which class will Bayesian classification favor?
+    → B) The class with the larger prior
+
+17. If P(A|B) ≠ P(B|A), which statement is correct?
+    → B) Conditional probabilities are generally not symmetric
+
+18. If two events A and B are independent, which relationship holds?
+    → A) P(A|B) = P(A)
+
+19. If the prior probability of a class is extremely small, can its posterior probability still become large?
+    → B) Yes, sufficiently strong evidence can overcome a low prior
+
+20. Two models produce the following probabilities for a hypothesis H:
+    Model A: Prior = 0.8, Likelihood = 0.2
+    Model B: Prior = 0.2, Likelihood = 0.8
+    Which statement is most appropriate?
+    → C) The posterior cannot be determined from these values alone without considering the evidence probability

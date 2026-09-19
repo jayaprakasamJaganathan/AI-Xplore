@@ -1,0 +1,79 @@
+A2: LDA Python - Answers
+========================
+
+1.  Which Python library provides a built-in implementation of Linear Discriminant Analysis?
+    → C) Scikit-learn
+
+2.  Which class is commonly used to implement LDA in Scikit-learn?
+    → B) LinearDiscriminantAnalysis
+
+3.  What is the purpose of the fit() method in Scikit-learn's LDA?
+    → B) Learn discriminant directions from labeled data
+
+4.  Which method is used to reduce dimensionality after fitting an LDA model?
+    → A) transform()
+
+5.  In Python, which library is most suitable for computing eigenvalues and eigenvectors manually?
+    → B) NumPy
+
+6.  What will happen if the target labels y are not provided while fitting an LDA model?
+    → B) LDA cannot be trained properly
+
+7.  Which command is used to import LDA from Scikit-learn?
+    → C) from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+
+8.  What is the output shape after applying LDA with n_components=2 to a dataset containing 100 samples?
+    → B) (100,2)
+
+9.  Which NumPy function is commonly used to compute eigenvalues and eigenvectors?
+    → B) np.linalg.eig()
+
+10. In an LDA workflow, why is feature scaling often performed before applying LDA?
+    → B) To ensure features contribute comparably
+
+11. Which parameter controls the number of discriminant components in Scikit-learn LDA?
+    → C) n_components
+
+12. Which matrix operation is required when implementing LDA from scratch?
+    → A) Matrix inversion
+
+13. While implementing LDA manually, which scatter matrix represents class compactness?
+    → B) Within-Class Scatter Matrix
+
+14. Which step comes first when implementing LDA from scratch?
+    → B) Compute class means
+
+15. After computing eigenvectors in manual LDA, what should be done next?
+    → B) Sort them according to eigenvalues
+
+16. Which NumPy function can be used to project data onto selected discriminant vectors?
+    → A) np.dot()
+
+17. What is the primary purpose of lda.predict(X_test)?
+    → B) Classify unseen samples
+
+18. Which metric is commonly used to evaluate an LDA classifier?
+    → A) Accuracy
+
+19. In Scikit-learn, LDA can be used for:
+    → C) Both classification and dimensionality reduction
+
+20. (Question 20 missing in source PDF)
+
+21. You are asked to implement Linear Discriminant Analysis from scratch using only NumPy (without using sklearn.discriminant_analysis.LinearDiscriminantAnalysis). Which sequence of steps is correct?
+    → A) Standardize Data → Compute Class Means → Compute Within-Class Scatter Matrix → Compute Between-Class Scatter Matrix → Solve Eigenvalue Problem of Sw⁻¹Sb → Select Top Eigenvectors → Project Data
+
+22. What is the purpose of the following line in a manual LDA implementation?
+    eigvals, eigvecs = np.linalg.eig(np.linalg.inv(Sw).dot(Sb))
+    → B) Compute discriminant directions
+
+23. Consider:
+    X_lda = X.dot(W)
+    What does W represent?
+    → B) Matrix of selected discriminant vectors
+
+24. In a scratch implementation, why are eigenvectors sorted in descending order of eigenvalues?
+    → B) To select directions with maximum discriminative power
+
+25. When implementing LDA manually, what is the most likely issue if Sw is singular?
+    → B) Matrix inversion fails

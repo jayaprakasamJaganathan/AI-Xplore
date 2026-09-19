@@ -1,0 +1,117 @@
+A6: Functions & Modularity - Answers
+====================================
+
+Source: A6 Functions & Modularity.pdf
+Date: 2026-09-06
+
+--- MCQ Answers (20 Questions) ---
+
+1.  Which keyword is used to define a function in Python?
+    → C) def
+
+2.  What is the main purpose of modular programming?
+    → B) To divide a program into smaller, reusable components
+
+3.  Which of the following correctly defines a function?
+    → B) def add(a,b):
+
+4.  What is the output of the following code?
+    def square(x):
+        return x * x
+    print(square(5))
+    → C) 25
+
+5.  What is the purpose of the return statement in a function?
+    → C) To send a value back to the caller
+
+6.  What is the output?
+    def add(a, b):
+        return a + b
+    x = add(10, 20)
+    print(x)
+    → C) 30
+
+7.  Which of the following is a parameter?
+    def multiply(x, y):
+        return x * y
+    → B) x and y
+
+8.  In the following statement, what are 10 and 20?
+    add(10, 20)
+    → B) Arguments
+
+9.  What happens if a function does not contain a return statement?
+    → B) It returns None
+
+10. What is the output?
+    def test():
+        x = 10
+    test()
+    print(x)
+    → C) NameError
+
+11. The variable x defined inside a function is generally:
+    → B) A local variable
+
+12. Which is an advantage of using functions?
+    → D) All of the above
+
+13. What is the output?
+    def greet(name="Student"):
+        return "Hello " + name
+    print(greet())
+    → B) Hello Student
+
+14. Which function definition uses a default parameter?
+    → B) def add(a, b=10):
+
+15. What is the output?
+    def calculate(a, b):
+        sum_value = a + b
+        product = a * b
+        return sum_value, product
+    x, y = calculate(3, 4)
+    print(x, y)
+    → A) 7 12
+
+16. Which of the following best represents modular design?
+    → B) Dividing a program into functions such as read_data(), process_data(), and display_result()
+
+17. Consider:
+    def preprocess(data):
+        data = data / 10
+        return data
+    def calculate(data):
+        return data * 5
+    x = preprocess(20)
+    y = calculate(x)
+    print(y)
+    What is the output?
+    → B) 10
+
+18. Which approach is most appropriate for writing a modular data-processing program?
+    → B) Separate functions for input, preprocessing, analysis, and output
+
+19. What is the output?
+    def modify(x):
+        x = x + 10
+    a = 5
+    modify(a)
+    print(a)
+    → A) 5
+
+20. Which of the following improves function reusability?
+    → B) Using appropriate parameters
+
+--- Practical Solutions (9 Exercises) ---
+All implemented in code/functions_modularity.py
+
+21. calculate_average(numbers) - accepts list, returns average without NumPy
+22. find_maximum(numbers) - accepts list, returns max without built-in max()
+23. Modular program: read_numbers() → calculate_mean() → calculate_max() → display_results()
+24. count_even(numbers) - counts even numbers using % 2 == 0
+25. calculate_accuracy(y_true, y_pred) + display_result(accuracy) - classification accuracy
+26. mean_and_std(numbers) - returns (mean, standard deviation)
+27. normalize(values) - min-max normalization: (x - min) / (max - min)
+28. ML Pipeline: load_data() → remove_missing_values() → normalize_data() → display_data()
+29. euclidean_distance(p1, p2) - sqrt(sum((a-b)²)) without built-in distance function

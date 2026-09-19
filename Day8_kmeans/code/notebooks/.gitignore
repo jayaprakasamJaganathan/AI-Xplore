@@ -1,0 +1,10 @@
+# Ignore concept notebooks (for understanding, not explicit assignment tasks)
+01_project_structure_demo.ipynb
+03_kmeans_vs_pca.ipynb
+04_bayes_knn_theory.ipynb
+
+# Ignore auto-generated executed notebooks
+*_executed.ipynb
+
+# Ignore checkpoint files
+.ipynb_checkpoints/

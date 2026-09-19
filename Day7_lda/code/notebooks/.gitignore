@@ -1,0 +1,9 @@
+# Ignore concept notebooks (for understanding, not explicit assignment tasks)
+01_lda_theory_exploration.ipynb
+02_lda_vs_pca_comparison.ipynb
+
+# Ignore auto-generated executed notebooks
+*_executed.ipynb
+
+# Ignore checkpoint files
+.ipynb_checkpoints/

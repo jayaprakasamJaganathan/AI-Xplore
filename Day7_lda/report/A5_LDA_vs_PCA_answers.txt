@@ -1,0 +1,95 @@
+A5: LDA vs PCA - Answers
+========================
+
+Source: A5 LDA vs PCA.pdf
+Date: 2026-09-06
+
+1.  Which statement correctly distinguishes PCA from LDA?
+    → B) PCA is unsupervised, while LDA is supervised
+
+2.  What information does PCA primarily use to determine the projection directions?
+    → C) Variance in the data
+
+3.  What information does LDA use that PCA does not?
+    → B) Class labels
+
+4.  The primary objective of PCA is to:
+    → C) Maximize variance in the projected data
+
+5.  The primary objective of LDA is to:
+    → B) Maximize between-class separation while minimizing within-class variation
+
+6.  Which technique is generally more suitable when the main goal is classification-oriented dimensionality reduction?
+    → B) LDA
+
+7.  Which technique can be applied when class labels are unavailable?
+    → B) PCA only
+
+8.  Consider a dataset where the direction of maximum variance does not correspond to the direction that best separates the classes. Which method is more likely to find the class-separating direction?
+    → B) LDA
+
+9.  Which matrices are central to LDA but not required in the same way for standard PCA?
+    → A) Within-class and between-class scatter matrices
+
+10. PCA generally finds principal components by performing:
+    → A) Eigenvalue decomposition of the covariance matrix
+
+11. LDA commonly obtains discriminant directions using:
+    → A) Sw⁻¹Sb
+
+12. For a dataset with C classes, the maximum number of meaningful LDA components is:
+    → C) C−1
+
+13. The maximum number of principal components produced by PCA is generally related to:
+    → B) Number of features
+
+14. Which method attempts to preserve the directions containing the greatest overall variance?
+    → B) PCA
+
+15. Which method explicitly attempts to reduce within-class scatter?
+    → B) LDA
+
+16. Suppose two classes have very different means but their largest variance occurs in a direction where the classes overlap heavily. Which method is more likely to prioritize class separation?
+    → B) LDA
+
+17. Which statement about PCA and LDA is correct?
+    → C) Their performance depends on the characteristics and assumptions of the dataset
+
+18. Which technique is more affected by the absence of class labels?
+    → B) LDA
+
+19. A researcher wants to visualize a labeled dataset in 2D while maximizing separation between different classes. Which method would generally be the more appropriate first choice?
+    → B) LDA
+
+20. A researcher wants to reduce the dimensionality of an unlabeled dataset while retaining as much overall variance as possible. Which method should be preferred?
+    → B) PCA
+
+21. Which statement is NOT correct?
+    → C) PCA directly maximizes class separability
+
+22. If the dataset contains 3 classes, what is the maximum number of LDA projection dimensions?
+    → B) 2
+
+23. Which method is generally more appropriate as a preprocessing technique when the goal is noise reduction without using class labels?
+    → B) PCA
+
+24. Which comparison is correct?
+    → A) PCA → maximize variance; LDA → maximize class separability
+
+25. If the direction of maximum variance in a dataset is unrelated to class discrimination, what is the main potential disadvantage of using PCA for classification?
+    → A) PCA may preserve high-variance features that do not help distinguish classes
+
+26. Which technique is more directly designed to find a projection where samples belonging to the same class are close and different classes are far apart?
+    → B) LDA
+
+27. Which statement best summarizes the difference between PCA and LDA?
+    → A) PCA focuses on data variance, whereas LDA focuses on class discrimination
+
+28. In a classification problem, which combination can be useful when the original feature space has a very high number of dimensions?
+    → A) PCA followed by LDA
+
+29. Why might PCA be applied before LDA in a high-dimensional dataset?
+    → B) To reduce dimensionality and help address singularity of the within-class scatter matrix
+
+30. Which pair is correctly matched?
+    → A) PCA — Unsupervised — Variance Maximization
