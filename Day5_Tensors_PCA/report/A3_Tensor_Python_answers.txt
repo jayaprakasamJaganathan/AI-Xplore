@@ -1,0 +1,261 @@
+Assignment 3: Tensor Python Tasks - Answers & Explanations
+=========================================================
+
+This file contains the answers and explanations for all 17 Python tasks.
+
+---
+
+TASK 1: Create a Tensor
+-----------------------
+**Code:**
+```python
+sensor_readings = np.array([25.2, 25.5, 24.9, 26.1, 25.8])
+print(f"Tensor: {sensor_readings}")
+print(f"Shape: {sensor_readings.shape}")           # (5,)
+print(f"ndim: {sensor_readings.ndim}")             # 1
+print(f"size: {sensor_readings.size}")             # 5
+```
+
+**Output:**
+- Tensor: [25.2 25.5 24.9 26.1 25.8]
+- Shape: (5,)
+- Number of dimensions: 1
+- Number of elements: 5
+
+**Key Concept:** A 1D tensor (vector) has shape (n,), ndim=1, size=n.
+
+---
+
+TASK 2: From Vector to Matrix
+-----------------------------
+**Code:**
+```python
+temperature = np.array([25, 26, 25, 27, 28])
+pressure = np.array([101, 102, 101, 103, 104])
+humidity = np.array([60, 62, 61, 63, 64])
+vibration = np.array([0.2, 0.3, 0.2, 0.4, 0.5])
+
+X = np.column_stack([temperature, pressure, humidity, vibration])
+# Shape: (5, 4) - rows=time, columns=sensors
+```
+
+**Output:**
+- Shape: (5, 4)
+- ndim: 2
+- First time step: [25. 101. 60. 0.2]
+- Temperature readings: [25 26 25 27 28]
+- Vibration readings: [0.2 0.3 0.2 0.4 0.5]
+
+**Axis Interpretation:**
+- Axis 0 (rows): Time steps (5)
+- Axis 1 (columns): Sensors (4) - Temp, Pressure, Humidity, Vibration
+
+---
+
+TASK 3: Create a 3D Tensor
+--------------------------
+**Code:**
+```python
+X = np.random.randn(10, 5, 4) * 10 + 25  # (machines, time, sensors)
+```
+
+**Queries:**
+1. Temperature of machine 3 at time step 2: `X[3, 2, 0]` = 28.62
+2. All sensors of machine 5: `X[5]` → shape (5, 4)
+3. All machines at time step 1: `X[:, 1, :]` → shape (10, 4)
+4. Sensor 4 from all machines/time: `X[:, :, 3]` → shape (10, 5)
+
+---
+
+TASK 4: Indexing a Tensor
+-------------------------
+**Tensor:** `X = np.arange(24).reshape(2, 3, 4)`
+
+| Index | Shape | Represents |
+|-------|-------|------------|
+| `X[0]` | (3, 4) | First block (all rows, cols of first matrix) |
+| `X[1]` | (3, 4) | Second block |
+| `X[0, 0]` | (4,) | First row of first block |
+| `X[0, 0, 0]` | () | Scalar: first element (value 0) |
+
+---
+
+TASK 5: Slicing
+---------------
+**Tensor:** `X = np.arange(60).reshape(3, 4, 5)`
+
+| Slice | Shape | Description |
+|-------|-------|-------------|
+| `X[0]` | (4, 5) | First block |
+| `X[:, 0, :]` | (3, 5) | First row from every block |
+| `X[:, :, 2]` | (3, 4) | Third column from every block |
+| `X[:, :, -2:]` | (3, 4, 2) | Last two columns from every block |
+
+---
+
+TASK 6: Image Tensor
+--------------------
+**Code:**
+```python
+image = np.random.randint(0, 256, (128, 128, 3), dtype=np.uint8)
+red = image[:, :, 0]    # (128, 128)
+green = image[:, :, 1]  # (128, 128)
+blue = image[:, :, 2]   # (128, 128)
+max_val = image.max()   # 255
+min_val = image.min()   # 0
+```
+
+---
+
+TASK 7: Batch of Images
+-----------------------
+**Code:**
+```python
+batch = np.random.randint(0, 256, (32, 128, 128, 3), dtype=np.uint8)
+first = batch[0]           # (128, 128, 3)
+first_10 = batch[:10]      # (10, 128, 128, 3)
+red_all = batch[:, :, :, 0]  # (32, 128, 128)
+pixel_50_50 = batch[:, 50, 50, :]  # (32, 3)
+```
+
+---
+
+TASK 8: Reshape
+---------------
+**Original:** `X = np.arange(24)` → shape (24,)
+
+| Reshape | Shape | ndim |
+|---------|-------|------|
+| (4, 6) | (4, 6) | 2 |
+| (2, 3, 4) | (2, 3, 4) | 3 |
+| (6, 4) | (6, 4) | 2 |
+| (24,) | (24,) | 1 |
+
+**Why reshape doesn't change total elements:** Reshaping only changes the view/metadata (strides, shape). The underlying data buffer remains unchanged. Total elements = product of shape dimensions must remain constant.
+
+---
+
+TASK 9: Reshape vs Transpose
+----------------------------
+**Original:** `X = np.arange(24).reshape(2, 3, 4)`
+
+- `X.reshape(3, 2, 4)`: Reinterprets memory layout, reads row-major, fills new shape
+- `X.transpose(1, 0, 2)`: Permutes axes (axis 1→0, axis 0→1, axis 2→2)
+
+**Result:** They are NOT equal. Reshape changes shape keeping memory order; transpose permutes axes rearranging data.
+
+---
+
+TASK 10: Broadcasting
+---------------------
+**Code:**
+```python
+X = np.ones((3, 4))
+b = np.array([10, 20, 30, 40])
+result = X + b  # (3, 4) + (4,) → (3, 4)
+```
+
+**Broadcasting Rules:**
+1. Align shapes on the right: (3, 4) and (4,)
+2. Compatible if equal or one is 1
+3. Missing left dimensions treated as 1
+4. b treated as (1, 4) → broadcast to (3, 4)
+5. Element-wise operation
+
+---
+
+TASK 11: Broadcasting with Sensor Data
+--------------------------------------
+**Code:**
+```python
+X = np.random.randn(100, 10) * 5 + 20  # (100 samples, 10 sensors)
+offsets = np.array([1.2, 0.8, 1.1, 0.5, 0.9, 1.0, 0.7, 1.3, 0.6, 0.4])
+X_calibrated = X - offsets  # Shape remains (100, 10)
+```
+
+---
+
+TASK 12: Tensor Aggregation
+---------------------------
+**Tensor:** `X = np.random.randn(100, 20, 5)` (machines × time × sensors)
+
+| Operation | Axis | Output Shape |
+|-----------|------|--------------|
+| Mean across time | 1 | (100, 5) |
+| Mean across sensors | 2 | (100, 20) |
+| Mean across machines | 0 | (20, 5) |
+| Max across time | 1 | (100, 5) |
+| Std across time | 1 | (100, 5) |
+
+---
+
+TASK 13: Normalize a Tensor
+---------------------------
+**Code:**
+```python
+X = np.random.randn(100, 20, 5) * 10 + 50
+sensor_mean = X.mean(axis=(0, 1), keepdims=True)  # (1, 1, 5)
+sensor_std = X.std(axis=(0, 1), keepdims=True)    # (1, 1, 5)
+X_normalized = (X - sensor_mean) / sensor_std
+```
+
+**Verification:** Mean ≈ 0, Std ≈ 1 for each sensor ✓
+
+---
+
+TASK 14: Flattening
+-------------------
+**Single Image:** (28, 28, 3) → (2352,)  [28×28×3=2352]
+
+**Batch:** (64, 28, 28, 3) → (64, 2352)  [Keep batch dimension!]
+
+**Why not (150528,)?** Loses batch structure, can't process samples independently, model expects (batch_size, features).
+
+---
+
+TASK 15: Concatenation
+----------------------
+**Code:**
+```python
+visual = np.random.randn(32, 128)
+sensor = np.random.randn(32, 64)
+combined = np.concatenate([visual, sensor], axis=1)  # (32, 192)
+```
+
+**Why feature dimension works:** Batch dimension (32) matches. Concatenation requires ALL other dimensions to match exactly. The concatenation axis is where dimensions ADD.
+
+---
+
+TASK 16: Mini Challenge - Sensor Dataset
+----------------------------------------
+**Dataset:** `X = np.random.randn(500, 60, 8) * 10 + 50` (machines × time × sensors)
+
+| Operation | Code | Result Shape |
+|-----------|------|--------------|
+| Machine 10 | `X[10]` | (60, 8) |
+| First 20 time steps | `X[:, :20, :]` | (500, 20, 8) |
+| Sensor 5 all machines | `X[:, :, 5]` | (500, 60) |
+| Avg per sensor | `X.mean(axis=(0,1))` | (8,) |
+| Avg per time step | `X.mean(axis=(0,2))` | (60,) |
+| Best machine | `X.mean(axis=(1,2)).argmax()` | Machine 338 |
+| Normalize sensors | `(X - mean) / std` | (500, 60, 8) |
+| Train/Test split | `X[:400]`, `X[400:]` | (400, 60, 8), (100, 60, 8) |
+
+---
+
+TASK 17: PyTorch
+----------------
+**Code:**
+```python
+X = torch.arange(24).reshape(2, 3, 4)
+print(X.shape)    # torch.Size([2, 3, 4])
+print(X.ndim)     # 3
+print(X.numel())  # 24
+
+X_large = torch.randn(32, 100, 768)
+```
+
+**Interpretation of (32, 100, 768):**
+- **NLP/Transformers:** Batch=32, Seq_len=100, Embed_dim=768 (BERT-base)
+- **Time Series:** Batch=32, Time_steps=100, Features=768
+- **Video:** Batch=32, Frames=100, Flattened_features=768

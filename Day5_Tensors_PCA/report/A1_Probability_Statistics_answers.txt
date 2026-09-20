@@ -1,0 +1,339 @@
+Assignment 1: Probability and Statistics (MCQs) - Answers
+=========================================================
+
+
+1. Probability Does Not Guarantee Outcomes
+Question: An engineer says: "The probability that a sensor fails tomorrow is 20%. Therefore, if we monitor 10 identical sensors tomorrow, exactly 2 sensors will fail." Is this reasoning correct?
+A. Yes, because 20% of 10 is 2
+B. Yes, provided the sensors are identical
+C. No, probability describes likelihood, not a guaranteed number of outcomes
+D. No, because probabilities cannot be calculated for sensors
+Answer: C. No, probability describes likelihood, not a guaranteed number of outcomes
+Explanation: Probability gives the expected long-run frequency, not a guarantee for any specific trial. With 10 sensors and 20% failure rate, the expected number is 2, but the actual number could be 0, 1, 2, 3, etc., following a binomial distribution.
+
+---
+
+2. Probability vs Certainty
+Question: A machine has a 90% probability of successfully completing a task. Which statement is correct?
+A. The machine will always complete the task successfully
+B. The machine will fail exactly 10% of the time
+C. The machine is more likely to succeed than fail, but a particular attempt can still fail
+D. The machine has already completed 90% of the task
+Answer: C. The machine is more likely to succeed than fail, but a particular attempt can still fail
+Explanation: 90% probability means high likelihood of success, not certainty. Each attempt is independent and can still fail.
+
+---
+
+3. Small Probability ≠ Impossible
+Question: An engineer says: "The probability of a critical system failure is 0.001%. Therefore, the system cannot realistically fail." What is wrong with this statement?
+A. A probability can never be less than 1%
+B. A very small probability means the event is impossible
+C. A small probability means the event is unlikely, not impossible
+D. Probability applies only to frequent events
+Answer: C. A small probability means the event is unlikely, not impossible
+Explanation: Small probability ≠ impossible. Rare events do occur given enough trials or time.
+
+---
+
+4. Large Probability ≠ Guaranteed
+Question: An AI model predicts a 99% probability that a component will pass inspection. Which statement is most appropriate?
+A. The component will definitely pass
+B. The component has a high predicted likelihood of passing
+C. The component is 99% physically correct
+D. The inspection is 99% accurate
+Answer: B. The component has a high predicted likelihood of passing
+Explanation: 99% probability indicates high confidence, not certainty. The component could still fail.
+
+---
+
+5. The Law of Averages
+Question: An engineer observes that a machine has failed four times in a row. He says: "The machine has failed four times, so it is now less likely to fail on the fifth attempt." Assuming each failure is independent, what is wrong?
+A. Failure probability always decreases after repeated failures
+B. The previous failures do not change the probability of the next failure
+C. The machine must fail again
+D. Probability cannot be applied to machines
+Answer: B. The previous failures do not change the probability of the next failure
+Explanation: For independent events, past outcomes don't affect future probabilities (Gambler's Fallacy).
+
+---
+
+6. Coin Toss Misconception
+Question: A fair coin has produced: H H H H H. A student says: "The next toss is more likely to be T because the coin needs to balance the results." What is the correct response?
+A. Correct — five Heads means Tail is now more likely
+B. Correct — probability changes after repeated outcomes
+C. Incorrect — for independent tosses, the next toss is still 50% Head and 50% Tail
+D. Incorrect — the next toss must be Head
+Answer: C. Incorrect — for independent tosses, the next toss is still 50% Head and 50% Tail
+Explanation: Each coin toss is independent. Past outcomes don't affect future probabilities.
+
+---
+
+7. Mean Does Not Describe Everything
+Question: An engineer says: "The average temperature recorded by a sensor was 30°C. Therefore, the sensor normally operates around 30°C." Can this conclusion necessarily be made?
+A. Yes
+B. No, the mean alone does not describe the distribution or spread of the data
+C. Yes, provided at least 100 measurements were taken
+D. No, because temperature cannot have an average
+Answer: B. No, the mean alone does not describe the distribution or spread of the data
+Explanation: Mean alone doesn't reveal variability, outliers, or distribution shape. Need standard deviation, range, etc.
+
+---
+
+8. Same Mean, Different Systems
+Question: Two manufacturing systems have the following measurements:
+System A: 49, 50, 50, 51, 50
+System B: 10, 30, 50, 70, 90
+Both have the same mean. Which conclusion is correct?
+A. The systems behave identically
+B. System A has much less variability than System B
+C. System B has a higher mean
+D. Mean is sufficient to distinguish the systems
+Answer: B. System A has much less variability than System B
+Explanation: System A values cluster tightly around 50 (low variance), System B values are widely spread (high variance). Same mean, very different behavior.
+
+---
+
+9. Mean vs Median
+Question: An engineer measures the salaries of employees in a company. One CEO earns ₹10 crore while most employees earn around ₹8 lakh. Which measure is likely to better represent the salary of a "typical" employee?
+A. Mean
+B. Median
+C. Maximum
+D. Variance
+Answer: B. Median
+Explanation: Mean is skewed by extreme outliers (CEO salary). Median represents the middle value, better for "typical" in skewed distributions.
+
+---
+
+10. Outlier Trap
+Question: A sensor records: 24.9, 25.1, 25.0, 25.2, 25.1, 80.0. An engineer calculates the mean and obtains a value considerably higher than 25°C. What is the most likely explanation?
+A. The median must also increase by the same amount
+B. The extreme observation has strongly influenced the mean
+C. The probability of temperature has changed
+D. Standard deviation must become zero
+Answer: B. The extreme observation has strongly influenced the mean
+Explanation: Mean is sensitive to outliers. The 80.0 reading pulls the mean up. Median would be robust.
+
+---
+
+11. Correlation ≠ Causation
+Question: An engineer observes: "When server temperature increases, network errors also increase." He concludes: "Higher temperature causes network errors." What is the problem?
+A. Correlation alone does not establish causation
+B. Temperature cannot be measured statistically
+C. Network errors cannot be analyzed
+D. Correlation always means causation
+Answer: A. Correlation alone does not establish causation
+Explanation: Correlation shows association, not causation. Could be confounding variable, reverse causation, or coincidence.
+
+---
+
+12. Sample ≠ Population
+Question: An engineer tests 100 batteries from a production line and finds that their average lifetime is 8 hours. He concludes: "Every battery produced by this factory has a lifetime of exactly 8 hours." What is wrong?
+A. A sample average does not imply every individual has the same value
+B. The sample must contain at least 10,000 batteries
+C. Average cannot be calculated for battery life
+D. Statistics cannot be used for manufacturing
+Answer: A. A sample average does not imply every individual has the same value
+Explanation: Sample mean estimates population mean. Individual values vary around the mean.
+
+---
+
+13. Random Sample
+Question: A company wants to estimate customer satisfaction. An engineer surveys only the 10 customers who voluntarily respond to an email and uses their responses to represent all customers. What is the main concern?
+A. The sample may be biased
+B. The sample is always perfectly representative
+C. Probability is not involved in surveys
+D. Ten observations always produce accurate results
+Answer: A. The sample may be biased
+Explanation: Voluntary response samples are typically biased (only motivated customers respond). Not representative of all customers.
+
+---
+
+14. Bigger Sample ≠ Automatically Correct
+Question: An engineer says: "Our sample contains one million observations, so our conclusion must be correct." Which response is best?
+A. Correct — a sufficiently large sample guarantees correctness
+B. Incorrect — a large but biased sample can still produce misleading conclusions
+C. Correct — sample size is the only important factor
+D. Incorrect — large datasets cannot be analyzed statistically
+Answer: B. Incorrect — a large but biased sample can still produce misleading conclusions
+Explanation: Sample size doesn't fix bias. A large biased sample gives precise but wrong estimates.
+
+---
+
+15. Standard Deviation
+Question: Two sensors have:
+Sensor A: Mean = 50, SD = 1
+Sensor B: Mean = 50, SD = 10
+Which statement is most appropriate?
+A. Sensor A has greater variability
+B. Sensor B has greater variability
+C. Both have identical variability
+D. Standard deviation tells us the mean
+Answer: B. Sensor B has greater variability
+Explanation: Standard deviation measures spread. SD=10 means readings vary more widely than SD=1.
+
+---
+
+16. Standard Deviation ≠ Error
+Question: An engineer says: "The standard deviation of the sensor readings is 5°C, so the sensor is wrong by 5°C." What is wrong?
+A. Standard deviation measures the spread of observations; it is not automatically measurement error
+B. Standard deviation is always the measurement error
+C. Standard deviation can only be calculated for probabilities
+D. Standard deviation must always be zero for a sensor
+Answer: A. Standard deviation measures the spread of observations; it is not automatically measurement error
+Explanation: SD measures natural variability in readings. Measurement error is a separate concept (accuracy vs precision).
+
+---
+
+17. Probability from Frequency
+Question: A factory observes that 50 out of 1,000 components failed during testing. An engineer says: "The probability of failure is exactly 5%." Which is the most careful interpretation?
+A. The observed failure proportion is 5%; it may be used as an estimate of the underlying failure probability under suitable assumptions
+B. The probability must be exactly 5%
+C. Probability cannot be estimated from data
+D. The probability is 50%
+Answer: A. The observed failure proportion is 5%; it may be used as an estimate of the underlying failure probability under suitable assumptions
+Explanation: Observed frequency estimates probability, but it's an estimate with uncertainty, not exact truth.
+
+---
+
+18. Past Data and Future Probability
+Question: An engineer analyzes 10 years of machine failures and estimates that the probability of failure next year is 3%. What assumption is implicitly important?
+A. The future operating conditions are sufficiently comparable to those represented by the historical data
+B. The machine must fail exactly three times
+C. Historical data can never be used for probability
+D. Probability does not depend on assumptions
+Answer: A. The future operating conditions are sufficiently comparable to those represented by the historical data
+Explanation: Using past data to predict future assumes stationarity — conditions haven't fundamentally changed.
+
+---
+
+19. Conditional Probability
+Question: An autonomous vehicle has a sensor that detects pedestrians. The engineer asks: "What is the probability that the pedestrian detection system raises an alarm given that a pedestrian is actually present?" What type of probability is this?
+A. P(Pedestrian | Alarm)
+B. P(Alarm | Pedestrian)
+C. P(Pedestrian)
+D. P(No Pedestrian)
+Answer: B. P(Alarm | Pedestrian)
+Explanation: "Given that a pedestrian is present" = condition. "Probability alarm raises" = event. This is P(Alarm | Pedestrian) — sensitivity/true positive rate.
+
+---
+
+20. Reversing Conditional Probability
+Question: A medical AI has: P(Positive test | Disease) = 95%. A student concludes: P(Disease | Positive test) = 95%. Is this necessarily true?
+A. Yes
+B. No, the two conditional probabilities are generally different
+C. Yes, if the sample size is large
+D. Yes, because both involve the same events
+Answer: B. No, the two conditional probabilities are generally different
+Explanation: P(A|B) ≠ P(B|A) in general. This is the base rate fallacy. Need Bayes' theorem to reverse.
+
+---
+
+21. Rare Event Trap
+Question: A disease occurs in only 1 out of every 1,000 people. A diagnostic test is highly accurate. A student says: "If the test is positive, the patient almost certainly has the disease." What additional information is important before making this conclusion?
+A. Disease prevalence and the test's false-positive rate
+B. Only the patient's age
+C. Only the number of patients tested
+D. The mean of the patient's measurements
+Answer: A. Disease prevalence and the test's false-positive rate
+Explanation: For rare diseases, even accurate tests produce many false positives. Need prevalence and specificity to compute P(Disease|Positive).
+
+---
+
+22. Independence
+Question: Two machines are operating in the same factory. An engineer says: "Their failures are independent because they are two different machines." Is this necessarily correct?
+A. Yes
+B. No, a common factor such as power failure or environmental conditions could make their failures dependent
+C. Yes, different machines are always independent
+D. Independence means both machines have the same failure rate
+Answer: B. No, a common factor such as power failure or environmental conditions could make their failures dependent
+Explanation: Physical separation ≠ statistical independence. Shared environment (power, temperature, maintenance) can create dependence.
+
+---
+
+23. Randomness
+Question: A sequence of measurements looks irregular: 12, 19, 14, 25, 17, 21, 13... An engineer says: "The sequence looks random, so the measurements must be independent." Is that conclusion justified?
+A. Yes
+B. No, apparent randomness does not establish statistical independence
+C. Yes, if there are more than 10 observations
+D. No, because numerical data cannot be random
+Answer: B. No, apparent randomness does not establish statistical independence
+Explanation: Visual randomness ≠ statistical independence. Independence is a property of the data-generating process, not appearance.
+
+---
+
+24. Expected Value
+Question: An engineering project has two possible outcomes: Gain ₹10,000 with probability 0.6, Lose ₹5,000 with probability 0.4. An engineer says: "Because there is a 40% chance of losing money, the project is a bad investment." What is missing from this reasoning?
+A. The possible outcomes and their probabilities should be considered together
+B. Probability should never be used for financial decisions
+C. The 40% outcome can be ignored
+D. Only the largest possible gain matters
+Answer: A. The possible outcomes and their probabilities should be considered together
+Explanation: Expected value = 0.6×10000 + 0.4×(-5000) = 6000 - 2000 = ₹4000 > 0. Must weigh all outcomes by probabilities.
+
+---
+
+25. Expected Value ≠ Guaranteed Result
+Question: Suppose the expected lifetime of a particular component is 10 years. An engineer says: "Therefore, every component should last exactly 10 years." What is wrong?
+A. Expected value describes a long-run average, not the guaranteed lifetime of an individual component
+B. Expected value means the minimum lifetime
+C. Expected value means the maximum lifetime
+D. Expected value is always the median
+Answer: A. Expected value describes a long-run average, not the guaranteed lifetime of an individual component
+Explanation: Expected value is average over many components. Individual lifetimes vary around this average.
+
+---
+
+26. Probability Distribution
+Question: An engineer says: "A probability distribution tells us exactly what value will occur next." Which is the correct response?
+A. Yes
+B. No, it describes how probability is distributed across possible outcomes
+C. Yes, if the distribution is normal
+D. No, probability distributions only describe past data
+Answer: B. No, it describes how probability is distributed across possible outcomes
+Explanation: Distribution shows probabilities for all possible values, not a prediction of the next specific value.
+
+---
+
+27. Normal Distribution Trap
+Question: A dataset of manufacturing measurements approximately follows a bell-shaped curve. An engineer says: "Because the distribution looks normal, every measurement must lie close to the mean." What is wrong?
+A. A normal distribution still allows observations far from the mean
+B. Normal distributions contain only the mean
+C. Normal distributions have no variability
+D. Normal distributions cannot be used in engineering
+Answer: A. A normal distribution still allows observations far from the mean
+Explanation: Normal distribution has tails extending to infinity. Observations far from mean are rare but possible (e.g., 3σ events).
+
+---
+
+28. Statistics and Uncertainty
+Question: An engineer calculates: Mean = 50.2, Standard deviation = 0.3. He says: "We now know the exact value of the population mean." Is this correct?
+A. Yes
+B. No, a sample statistic provides information about the population but generally involves uncertainty
+C. Yes, if the standard deviation is small
+D. Yes, if more than 100 samples were used
+Answer: B. No, a sample statistic provides information about the population but generally involves uncertainty
+Explanation: Sample mean estimates population mean with uncertainty (standard error, confidence intervals). Never "exact."
+
+---
+
+29. Statistical Significance
+Question: An engineer observes that Method A produces slightly better results than Method B. He says: "Method A is better because its average performance is higher." What should he consider before making a strong conclusion?
+A. Whether the observed difference could reasonably be due to sampling variation
+B. Only the maximum value
+C. Only the number of variables
+D. Whether Method A was developed first
+Answer: A. Whether the observed difference could reasonably be due to sampling variation
+Explanation: Need hypothesis testing / confidence intervals to distinguish real effect from random noise.
+
+---
+
+30. The Ultimate Conceptual Question
+Question: An engineer is given the following statement: "Based on 10,000 observations, the average failure rate was 2%." Which question is fundamentally about statistics, and which is fundamentally about probability?
+Question 1: What was the observed failure rate in the collected data?
+Question 2: What is the probability that the next randomly selected component will fail?
+A. Both are probability questions
+B. Both are statistics questions
+C. Question 1 is statistics; Question 2 is probability
+D. Question 1 is probability; Question 2 is statistics
+Answer: C. Question 1 is statistics; Question 2 is probability
+Explanation: Statistics = analyzing observed data (past). Probability = predicting future events based on models.
