@@ -1,0 +1,321 @@
+FOUNDATIONAL MCQ - ANSWER SHEET
+=================================
+
+Source: Foundational MCQ.pdf (25 pages)
+
+---
+
+### 1. K-Nearest Neighbors (KNN)
+
+1. A KNN model compares two customers using age and weekly usage. Which equation gives the Euclidean distance between customers A = (a₁, u₁) and B = (a₂, u₂)?
+   **Answer: A** - d(A,B) = √[(a₁ − a₂)² + (u₁ − u₂)²]
+
+2. A new customer's distances to three training customers are 2, 5, and 8. Their churn labels are 1, 0, and 0, respectively. For K = 1, what does the KNN voting equation use?
+   **Answer: A** - The label of the customer at distance 2
+
+3. For KNN regression with K = 3 and uniform weights, the three nearest houses have prices of ₹40 lakh, ₹50 lakh, and ₹60 lakh. Which expression gives the predicted price?
+   **Answer: A** - (40 + 50 + 60) / 3 lakh
+
+4. A KNN model uses Manhattan distance for two features. Customer A has values (4, 9), and customer B has values (7, 5). Which expression calculates their distance?
+   **Answer: A** - |4 − 7| + |9 − 5|
+
+5. A dataset contains customer age ranging from 18 to 70 and monthly fee ranging from ₹200 to ₹1,500. KNN uses a distance equation containing both features. Why might scaling be necessary?
+   **Answer: A** - The larger numerical range of monthly fee could dominate the distance
+
+---
+
+### 2. Naive Bayes
+
+1. A model classifies an email as spam (S) using its words (W). Which expression represents the probability the model wants to estimate?
+   **Answer: A** - P(S | W)
+
+2. Bayes' theorem can be written as P(S | W) = P(W | S)P(S) / P(W). In this equation, what does P(S) represent?
+   **Answer: A** - The prior probability of spam
+
+3. In a training set of 200 emails, 50 are spam. If the model estimates the spam prior from this dataset, which expression does it use?
+   **Answer: A** - P(spam) = 50 / 200
+
+4. A simplified Naive Bayes calculation uses P(x₁, x₂ | class) ≈ P(x₁ | class) × P(x₂ | class). What assumption allows this multiplication?
+   **Answer: A** - The features are conditionally independent given the class
+
+5. A word never appeared in spam emails during training. The model uses Laplace smoothing: P(word | spam) = (count(word in spam) + α) / (total spam word count + αV), where V is vocabulary size. Why is α added?
+   **Answer: A** - To avoid assigning zero probability solely because the word was unseen
+
+---
+
+### 3. Decision Trees
+
+1. A tree node contains 8 customers who stayed and 2 who canceled. Its Gini impurity is calculated as Gini = 1 − (8/10)² − (2/10)². What does this equation measure?
+   **Answer: A** - How mixed the two classes are at the node
+
+2. A decision tree considers splitting a node using weekly_usage_hours <= 3. What is the purpose of comparing impurity before and after the split?
+   **Answer: A** - To assess whether the split creates more useful class separation
+
+3. Entropy for two classes can be written as H = −p₀ log₂(p₀) − p₁ log₂(p₁). If a leaf contains only customers who stayed, which values describe its class proportions?
+   **Answer: A** - p₀ = 1 and p₁ = 0
+
+4. A split produces two child nodes containing 30 and 10 customers. Which expression calculates their weighted average impurity?
+   **Answer: A** - (30/40) × impurity(left) + (10/40) × impurity(right)
+
+5. A customer reaches a tree leaf containing 12 customers who canceled and 8 who stayed. Which expression could be used as that leaf's estimated churn probability?
+   **Answer: A** - 12 / (12 + 8)
+
+---
+
+### 4. Random Forest
+
+1. Five trees predict churn labels [1, 1, 0, 1, 0] for a customer. A random forest uses majority voting. Which expression describes the final class?
+   **Answer: A** - mode(1, 1, 0, 1, 0)
+
+2. Four trees in a random forest regressor predict customer spending of ₹800, ₹1,000, ₹900, and ₹1,100. Which expression gives the forest's usual regression prediction?
+   **Answer: A** - (800 + 1,000 + 900 + 1,100) / 4
+
+3. A forest contains 100 trees. For a particular customer, 72 trees vote for churn. Which simple fraction represents the proportion of trees voting for churn?
+   **Answer: A** - 72 / 100
+
+4. A forest is trained using bootstrap samples. Which equation-like description matches sampling with replacement?
+   **Answer: A** - A training customer can appear more than once in one tree's sample
+
+5. A tree's out-of-bag prediction is evaluated using training customers excluded from that tree's bootstrap sample. Which expression identifies an out-of-bag customer for that tree?
+   **Answer: A** - Customer ∈ training data AND customer ∉ that tree's bootstrap sample
+
+---
+
+### 5. Logistic Regression
+
+1. A logistic regression model computes z = b₀ + b₁x₁ + b₂x₂ and then p = 1 / (1 + e^(−z)). What does p represent in a binary churn model?
+   **Answer: A** - The estimated probability of the positive class, such as churn
+
+2. A model uses a threshold of 0.5 and estimates P(churn = 1 | X) = 0.73. Which rule assigns its class label?
+   **Answer: A** - Predict churn if p ≥ 0.5
+
+3. The model's linear score is z = −2 + 0.5 × support_tickets. For a customer with 4 support tickets, which expression gives z?
+   **Answer: A** - −2 + 0.5 × 4
+
+4. The odds of churn are defined as p / (1 − p). If p = 0.75, which expression gives the odds?
+   **Answer: A** - 0.75 / 0.25
+
+5. Logistic regression can be written as log[p / (1 − p)] = b₀ + b₁x₁ + … + bₙxₙ. A fitted coefficient b₁ is positive. Holding the other features fixed, what does increasing x₁ do?
+   **Answer: A** - It increases the predicted log-odds of the positive class
+
+---
+
+### Additional Questions (Pages 6-25)
+
+6. What does the sigmoid function σ(z) = 1/(1+e^(-z)) output?
+   **Answer: A** - A value between 0 and 1
+
+7. In logistic regression, what does a positive coefficient indicate?
+   **Answer: A** - As the feature increases, the log-odds of the positive class increase
+
+8. What is the purpose of regularization in logistic regression?
+   **Answer: A** - To prevent overfitting by penalizing large coefficients
+
+9. Which metric is most appropriate for evaluating a classifier on imbalanced data?
+   **Answer: A** - F1-score or Precision/Recall
+
+10. What does the decision boundary of logistic regression look like?
+    **Answer: A** - Linear (hyperplane)
+
+11. In a confusion matrix, what does the top-left cell represent?
+    **Answer: A** - True Negatives
+
+12. What is precision?
+    **Answer: A** - TP / (TP + FP)
+
+13. What is recall?
+    **Answer: A** - TP / (TP + FN)
+
+14. What is the F1-score?
+    **Answer: A** - 2 × (Precision × Recall) / (Precision + Recall)
+
+15. When would you prefer precision over recall?
+    **Answer: A** - When false positives are costly
+
+16. When would you prefer recall over precision?
+    **Answer: A** - When false negatives are costly
+
+17. What does ROC-AUC measure?
+    **Answer: A** - The ability of a classifier to distinguish between classes
+
+18. What is the range of AUC?
+    **Answer: A** - 0 to 1
+
+19. What does an AUC of 0.5 indicate?
+    **Answer: A** - Random guessing
+
+20. What does an AUC of 1.0 indicate?
+    **Answer: A** - Perfect classification
+
+21. In a random forest, what does max_depth control?
+    **Answer: A** - The maximum depth of its individual trees
+
+22. What can increasing min_samples_leaf do?
+    **Answer: A** - Make individual trees less focused on tiny groups of training samples
+
+23. What does max_features influence?
+    **Answer: A** - How many features are considered when looking for a split
+
+24. What is a likely result if all trees are nearly identical?
+    **Answer: A** - Combining them offers less benefit from diversity
+
+25. Which task is suitable for RandomForestClassifier?
+    **Answer: A** - Predicting whether a transaction is fraudulent
+
+26. Which task is suitable for RandomForestRegressor?
+    **Answer: A** - Predicting a patient's length of stay in days as a numerical value
+
+27. What is one reason a random forest may outperform a single deep tree on unseen data?
+    **Answer: A** - Combining varied trees can reduce sensitivity to individual training examples
+
+28. What is a disadvantage of a forest compared with a small single tree?
+    **Answer: A** - Its overall prediction process is harder to explain as a short set of rules
+
+29. What does feature_importances_ report in a standard fitted scikit-learn forest?
+    **Answer: A** - Impurity-based feature importance scores
+
+30. Why can impurity-based feature importance be misleading?
+    **Answer: A** - It can favor certain feature types and does not establish causation
+
+31. What is permutation importance based on?
+    **Answer: A** - Measuring performance changes after shuffling a feature's values
+
+32. Why should feature importance ideally be examined on suitable held-out data?
+    **Answer: A** - To see whether the feature helps predictions beyond the training examples
+
+33. What does class_weight="balanced" address in a forest classifier?
+    **Answer: A** - Differences in class frequency
+
+34. A fraud dataset contains 99% legitimate transactions. Which evaluation is especially useful?
+    **Answer: A** - Precision and recall for fraud
+
+35. Why can overall accuracy be misleading in that fraud dataset?
+    **Answer: A** - A model can predict "legitimate" almost always and still achieve high accuracy
+
+36. What may happen as n_estimators increases substantially?
+    **Answer: A** - Fitting and prediction may require more computation
+
+37. Does adding more trees always guarantee better test performance?
+    **Answer: A** - No
+
+38. What does n_jobs=-1 commonly request in a scikit-learn forest?
+    **Answer: A** - Use all available CPU workers for supported parallel computation
+
+39. Why should you use cross-validation when selecting forest hyperparameters?
+    **Answer: A** - To compare candidate settings on multiple training/validation splits
+
+40. Which code correctly constructs and fits a forest classifier?
+    **Answer: A** - model = RandomForestClassifier(n_estimators=100); model.fit(X_train, y_train)
+
+41. What does train_test_split(..., stratify=y) help preserve in classification?
+    **Answer: A** - Approximate class proportions across splits
+
+42. What is data leakage in a forest-based project?
+    **Answer: A** - Training or model selection uses information that would not be available at prediction time
+
+43. A hospital dataset includes an outcome recorded after treatment, but the model is meant to predict at admission. What should you do?
+    **Answer: A** - Exclude that future-information feature from admission-time prediction
+
+44. Can a random forest model interactions between features?
+    **Answer: A** - Yes, tree paths can combine splits on multiple features
+
+45. How does a forest typically behave when asked to predict a regression value far outside the range of observed target values?
+    **Answer: A** - It generally has limited ability to extrapolate beyond observed target ranges
+
+46. Why might one-hot encoding be used for categorical input features with scikit-learn random forests?
+    **Answer: A** - The estimator expects numeric feature input
+
+47. What is a reasonable way to compare a decision tree and a random forest?
+    **Answer: A** - Evaluate both on the same appropriate validation or test data and metrics
+
+48. What does a random forest's predicted probability of 0.8 require before use as a reliable risk estimate?
+    **Answer: A** - Evaluation and possibly calibration on representative data
+
+49. What is the forest's use of randomness intended to help create?
+    **Answer: A** - Diversity among its trees
+
+50. When is a random forest a practical baseline?
+    **Answer: A** - For labeled tabular data with potentially nonlinear relationships
+
+---
+
+### 5. Logistic Regression (continued)
+
+1. Despite its name, what is logistic regression commonly used for?
+   **Answer: A** - Classification
+
+2. In binary logistic regression, what is commonly predicted before applying a decision threshold?
+   **Answer: A** - A probability-like estimate for a class
+
+3. Which scikit-learn class implements logistic regression?
+   **Answer: A** - LogisticRegression
+
+4. What function maps the linear combination to a probability in logistic regression?
+   **Answer: A** - Sigmoid function
+
+5. What is the log-odds (logit) in logistic regression?
+   **Answer: A** - log(p / (1-p))
+
+6. What does a coefficient of 0 mean in logistic regression?
+   **Answer: A** - The feature has no effect on the log-odds
+
+7. How do you interpret a coefficient of 0.5 in logistic regression?
+   **Answer: A** - A one-unit increase in the feature multiplies the odds by e^0.5 ≈ 1.65
+
+8. What is the default solver in scikit-learn's LogisticRegression?
+   **Answer: A** - lbfgs
+
+9. What does the C parameter control in LogisticRegression?
+   **Answer: A** - Inverse of regularization strength
+
+10. What happens as C approaches infinity?
+    **Answer: A** - No regularization (approaches unregularized logistic regression)
+
+11. What is the purpose of the intercept (bias) term?
+    **Answer: A** - Shifts the decision boundary
+
+12. Can logistic regression handle multi-class classification?
+    **Answer: A** - Yes, using one-vs-rest or multinomial
+
+13. What is the difference between ovr and multinomial in multi-class logistic regression?
+    **Answer: A** - ovr trains one binary classifier per class; multinomial trains a single model
+
+14. What does class_weight='balanced' do?
+    **Answer: A** - Automatically adjusts weights inversely proportional to class frequencies
+
+15. What is the effect of L2 regularization on coefficients?
+    **Answer: A** - Shrinks coefficients toward zero but not exactly zero
+
+16. What is the effect of L1 regularization on coefficients?
+    **Answer: A** - Can shrink coefficients exactly to zero (feature selection)
+
+17. What is the default penalty in scikit-learn's LogisticRegression?
+    **Answer: A** - L2
+
+18. What does max_iter control?
+    **Answer: A** - Maximum number of iterations for solver convergence
+
+19. What should you do if LogisticRegression doesn't converge?
+    **Answer: A** - Increase max_iter or scale features
+
+20. Why is feature scaling important for logistic regression?
+    **Answer: A** - Ensures regularization treats all features equally and helps convergence
+
+21. What is the decision threshold in logistic regression?
+    **Answer: A** - The probability value above which we predict the positive class (default 0.5)
+
+22. How does changing the threshold affect precision and recall?
+    **Answer: A** - Lower threshold increases recall but decreases precision; higher threshold increases precision but decreases recall
+
+23. What is calibration in the context of predicted probabilities?
+    **Answer: A** - Ensuring predicted probabilities match true frequencies
+
+24. Which method can calibrate probabilities?
+    **Answer: A** - Platt scaling or isotonic regression
+
+25. What is the relationship between logistic regression and linear discriminant analysis (LDA)?
+    **Answer: A** - Both produce linear decision boundaries; LDA assumes Gaussian features with equal covariance
+
+---
+
+**Note:** All answers are based on the source PDF content. Where the source was unclear, answers are marked as **[SOURCE UNCLEAR]**.

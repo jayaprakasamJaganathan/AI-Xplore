@@ -1,0 +1,110 @@
+FOUNDATIONAL MCQ 2 - ANSWER SHEET
+====================================
+
+Source: Foundational MCQ 2.pdf (5 pages)
+
+---
+
+### 1. K-Nearest Neighbors (KNN)
+
+1. A hospital has records containing patients' age, blood pressure, and glucose level. It wants to classify a new patient by looking at patients with similar measurements. Which approach best describes KNN?
+   **Answer: B** - Find similar patients and use their labels to classify the new patient
+
+2. A KNN model for identifying plant species uses n_neighbors=5. A new plant's five nearest neighbors include three roses and two lilies. What will a standard KNN classifier predict?
+   **Answer: A** - Rose
+
+3. A student builds KNN using patient age (18-90) and annual medical expenditure (0-500,000). The model seems to rely mostly on expenditure. What should the student consider?
+   **Answer: A** - Scaling the features before fitting KNN
+
+4. A team wants to predict the price of a house using prices of similar houses nearby. Which Python model fits this task?
+   **Answer: B** - KNeighborsRegressor
+
+5. A researcher uses KNeighborsClassifier(n_neighbors=1) to classify noisy medical records. Training accuracy is very high, but test accuracy is poor. What is a reasonable explanation?
+   **Answer: A** - One unusual training example can strongly affect a prediction
+
+6. A student increases K from 3 to 200 in a small classification dataset. The model begins predicting the majority class for many different samples. Why?
+   **Answer: A** - A large neighborhood can hide local patterns
+
+7. A wildlife team has labeled measurements from 50,000 animals. Predictions with KNN are slower than expected. What is a likely reason?
+   **Answer: A** - Predicting may involve searching many stored examples for nearby animals
+
+8. A student wants closer patients to influence a KNN prediction more than patients farther away. Which setting is most relevant?
+   **Answer: A** - weights="distance"
+
+9. A team is choosing between K values of 3, 5, 7, and 9. What is an appropriate way to select K?
+   **Answer: A** - Compare their performance using cross-validation on the training data
+
+10. A student writes model = KNeighborsClassifier(n_neighbors=5) and then wants to train it. Which line should come next?
+    **Answer: A** - model.fit(X_train, y_train)
+
+---
+
+### 2. Naive Bayes
+
+1. An email service wants to classify messages as spam or legitimate using the words in each email. Why might Naive Bayes be a useful starting point?
+   **Answer: A** - It can use word-based evidence to compare the possible classes
+
+2. A student converts emails into word-count features using CountVectorizer. Which model is a common choice for these features?
+   **Answer: A** - MultinomialNB
+
+3. A medical dataset contains continuous measurements such as temperature, heart rate, and blood pressure. The student wants to try a Naive Bayes model that assumes a Gaussian distribution for each feature within each class. Which model should they choose?
+   **Answer: A** - GaussianNB
+
+4. A news classifier represents each article by whether a particular word is present (1) or absent (0). Which Naive Bayes variant naturally matches this binary representation?
+   **Answer: A** - BernoulliNB
+
+5. In a training dataset, the word "prize" has never appeared in legitimate emails. Without smoothing, what problem can this cause?
+   **Answer: A** - Its estimated likelihood under the legitimate class may be zero
+
+6. A student sets MultinomialNB(alpha=1.0). What is the purpose of alpha in this situation?
+   **Answer: A** - Control additive smoothing
+
+7. Two words, "chest" and "pain," often appear together in clinical notes. What does the "naive" assumption simplify?
+   **Answer: A** - It treats feature evidence as conditionally independent given a class
+
+8. A dataset contains 90% legitimate emails and 10% spam. Before examining the words in a new email, which information can Naive Bayes use?
+   **Answer: A** - The class prior probabilities
+
+9. A student fits CountVectorizer on all emails before splitting into training and test sets. Why should the student revise this workflow?
+   **Answer: A** - The vocabulary preparation can use information from the test emails
+
+10. A spam model achieves 96% accuracy, but nearly all spam messages are missed. Which result should the team inspect closely?
+    **Answer: A** - Recall for the spam class
+
+---
+
+### 3. Decision Trees
+
+1. A doctor wants a model that can produce rules such as "if glucose exceeds a threshold, then check age." Which model naturally produces this style of decision process?
+   **Answer: A** - Decision tree
+
+2. A bank trains a decision tree to classify loan applications. The first question in the tree is whether income exceeds ₹50,000 per month. What is this first question called?
+   **Answer: A** - A root-node split
+
+3. A student's tree correctly classifies almost every training example but performs poorly on new examples. The tree has many tiny leaves. What should the student consider?
+   **Answer: A** - Restricting tree depth or increasing min_samples_leaf
+
+4. A hospital wants to predict whether a patient will be readmitted: yes or no. Which Python model matches this target?
+   **Answer: A** - DecisionTreeClassifier
+
+5. The same hospital now wants to predict the number of days a patient will remain admitted. Which tree model matches this target?
+   **Answer: A** - DecisionTreeRegressor
+
+6. A tree uses the rule temperature <= 38.0. A patient has a temperature of 37.5°C. What does the tree do?
+   **Answer: A** - Follow the branch where the condition is true
+
+7. A team needs to explain a small tree's predictions to clinicians. Which Python function can help display its learned splits?
+   **Answer: A** - plot_tree
+
+8. A student sees that a feature has high feature_importances_ in a fitted tree. Which conclusion is justified?
+   **Answer: A** - The fitted tree relied strongly on that feature for its splits
+
+9. A tree for predicting disease at hospital admission includes a laboratory result obtained three days after admission. What is the main concern?
+   **Answer: A** - The feature would not be available when the prediction is needed
+
+10. A student wants to compare max_depth values of 2, 4, and 8. What is the best purpose of doing so?
+    **Answer: A** - Find a depth that balances useful patterns and generalization
+
+---
+
+**Note:** All answers are based on the source PDF content. Where the source was unclear, answers are marked as **[SOURCE UNCLEAR]**.
