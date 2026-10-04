@@ -1,0 +1,399 @@
+PYTHON BASICS (SLICING, DICTIONARY) - ANSWER SHEET
+====================================================
+
+Source: Assignment 2 (Basics).ipynb
+
+---
+
+### Part A – 3D Arrays
+
+#### Question 1
+Create the following 3D array:
+Layer 1: [[1, 2, 3], [4, 5, 6]]
+Layer 2: [[7, 8, 9], [10, 11, 12]]
+
+Write a Python program to:
+- Print the complete 3D array.
+- Print the first layer.
+- Print the second row of the second layer.
+- Print the element 11.
+
+**Solution:**
+```python
+import numpy as np
+
+arr_3d = np.array([
+    [[1, 2, 3], [4, 5, 6]],      # Layer 1
+    [[7, 8, 9], [10, 11, 12]]    # Layer 2
+])
+
+print("Complete 3D array:")
+print(arr_3d)
+print(f"Shape: {arr_3d.shape}")  # (2, 2, 3)
+
+print("\nFirst layer (index 0):")
+print(arr_3d[0])
+
+print("\nSecond row of second layer (layer 1, row 1):")
+print(arr_3d[1, 1])
+
+print("\nElement 11 (layer 1, row 1, column 1):")
+print(arr_3d[1, 1, 1])
+```
+
+**Output:**
+```
+Complete 3D array:
+[[[ 1  2  3]
+  [ 4  5  6]]
+
+ [[ 7  8  9]
+  [10 11 12]]]
+Shape: (2, 2, 3)
+
+First layer (index 0):
+[[1 2 3]
+ [4 5 6]]
+
+Second row of second layer (layer 1, row 1):
+[10 11 12]
+
+Element 11 (layer 1, row 1, column 1):
+11
+```
+
+---
+
+#### Question 2
+Using the same 3D array, reverse the order of layers.
+
+**Expected Output:**
+Layer 2: [[7, 8, 9], [10, 11, 12]]
+Layer 1: [[1, 2, 3], [4, 5, 6]]
+
+**Solution:**
+```python
+arr_reversed_layers = arr_3d[::-1]
+
+print("Reversed layers:")
+for i, layer in enumerate(arr_reversed_layers):
+    print(f"\nLayer {2-i}:")
+    for row in layer:
+        print(list(row))
+```
+
+**Output:**
+```
+Reversed layers:
+
+Layer 2:
+[7, 8, 9]
+[10, 11, 12]
+
+Layer 1:
+[1, 2, 3]
+[4, 5, 6]
+```
+
+---
+
+#### Question 3
+Reverse every row inside every layer.
+
+**Solution:**
+```python
+arr_reversed_rows = arr_3d[:, :, ::-1]
+
+print("Reversed rows in each layer:")
+for i, layer in enumerate(arr_reversed_rows):
+    print(f"\nLayer {i+1}:")
+    for row in layer:
+        print(list(row))
+```
+
+**Output:**
+```
+Reversed rows in each layer:
+
+Layer 1:
+[3, 2, 1]
+[6, 5, 4]
+
+Layer 2:
+[9, 8, 7]
+[12, 11, 10]
+```
+
+---
+
+#### Question 4
+Completely reverse the entire 3D array by reversing:
+- the order of layers,
+- the order of rows inside each layer,
+- the elements inside every row.
+
+**Expected Output:**
+[12, 11, 10]
+[9, 8, 7]
+[6, 5, 4]
+[3, 2, 1]
+
+**Solution:**
+```python
+arr_complete_reverse = arr_3d[::-1, ::-1, ::-1]
+
+print("Completely reversed 3D array:")
+for layer in arr_complete_reverse:
+    for row in layer:
+        print(list(row))
+```
+
+**Output:**
+```
+Completely reversed 3D array:
+[12, 11, 10]
+[9, 8, 7]
+[6, 5, 4]
+[3, 2, 1]
+```
+
+---
+
+### Part B – Dictionaries
+
+#### Question 5
+Create a dictionary to store the following student details:
+| Key        | Value   |
+| ---------- | ------- |
+| Roll No    | 101     |
+| Name       | Alice   |
+| Age        | 20      |
+| Department | AI & DS |
+| CGPA       | 8.9     |
+
+Display all the information.
+
+**Solution:**
+```python
+student = {
+    "Roll No": 101,
+    "Name": "Alice",
+    "Age": 20,
+    "Department": "AI & DS",
+    "CGPA": 8.9
+}
+
+print("Student Details:")
+for key, value in student.items():
+    print(f"  {key}: {value}")
+```
+
+**Output:**
+```
+Student Details:
+  Roll No: 101
+  Name: Alice
+  Age: 20
+  Department: AI & DS
+  CGPA: 8.9
+```
+
+---
+
+#### Question 6
+Using the dictionary created above:
+- Update the CGPA to 9.2
+- Add a new key named City with value Chennai
+- Display the updated dictionary.
+
+**Solution:**
+```python
+student["CGPA"] = 9.2
+student["City"] = "Chennai"
+
+print("Updated Student Details:")
+for key, value in student.items():
+    print(f"  {key}: {value}")
+```
+
+**Output:**
+```
+Updated Student Details:
+  Roll No: 101
+  Name: Alice
+  Age: 20
+  Department: AI & DS
+  CGPA: 9.2
+  City: Chennai
+```
+
+---
+
+#### Question 7
+Write a program to print:
+- all keys
+- all values
+- all key-value pairs
+using appropriate dictionary methods.
+
+**Solution:**
+```python
+print("All keys:", list(student.keys()))
+print("All values:", list(student.values()))
+print("All key-value pairs:", list(student.items()))
+```
+
+**Output:**
+```
+All keys: ['Roll No', 'Name', 'Age', 'Department', 'CGPA', 'City']
+All values: [101, 'Alice', 20, 'AI & DS', 9.2, 'Chennai']
+All key-value pairs: [('Roll No', 101), ('Name', 'Alice'), ('Age', 20), ('Department', 'AI & DS'), ('CGPA', 9.2), ('City', 'Chennai')]
+```
+
+---
+
+#### Question 8
+Create the following nested dictionary:
+```python
+students = {
+    "Student1": {"Name": "John", "Age": 22},
+    "Student2": {"Name": "Alice", "Age": 21},
+    "Student3": {"Name": "David", "Age": 20}
+}
+```
+
+Write a program to:
+- Print the name of Student2.
+- Print the age of Student3.
+- Display all student names using a loop.
+
+**Solution:**
+```python
+students = {
+    "Student1": {"Name": "John", "Age": 22},
+    "Student2": {"Name": "Alice", "Age": 21},
+    "Student3": {"Name": "David", "Age": 20}
+}
+
+print(f"Name of Student2: {students['Student2']['Name']}")
+print(f"Age of Student3: {students['Student3']['Age']}")
+
+print("\nAll student names:")
+for key, info in students.items():
+    print(f"  {key}: {info['Name']}")
+```
+
+**Output:**
+```
+Name of Student2: Alice
+Age of Student3: 20
+
+All student names:
+  Student1: John
+  Student2: Alice
+  Student3: David
+```
+
+---
+
+#### Question 9
+Create a dictionary of five products (Laptop, Mouse, Keyboard, Monitor, Printer).
+Each product contains: Product Name, Price, Quantity.
+
+Write a program to:
+- Display all products.
+- Print the product with the highest price.
+- Calculate the total inventory value (Price × Quantity).
+
+**Solution:**
+```python
+products = {
+    "Laptop": {"Product Name": "Laptop", "Price": 50000, "Quantity": 10},
+    "Mouse": {"Product Name": "Mouse", "Price": 500, "Quantity": 100},
+    "Keyboard": {"Product Name": "Keyboard", "Price": 1500, "Quantity": 50},
+    "Monitor": {"Product Name": "Monitor", "Price": 12000, "Quantity": 20},
+    "Printer": {"Product Name": "Printer", "Price": 8000, "Quantity": 15}
+}
+
+print("All Products:")
+for name, details in products.items():
+    print(f"  {details['Product Name']}: Price=₹{details['Price']}, Qty={details['Quantity']}")
+
+# Product with highest price
+highest_price_product = max(products.items(), key=lambda x: x[1]['Price'])
+print(f"\nProduct with highest price: {highest_price_product[1]['Product Name']} (₹{highest_price_product[1]['Price']})")
+
+# Total inventory value
+total_inventory = sum(details['Price'] * details['Quantity'] for details in products.values())
+print(f"Total Inventory Value: ₹{total_inventory:,}")
+```
+
+**Output:**
+```
+All Products:
+  Laptop: Price=₹50000, Qty=10
+  Mouse: Price=₹500, Qty=100
+  Keyboard: Price=₹1500, Qty=50
+  Monitor: Price=₹12000, Qty=20
+  Printer: Price=₹8000, Qty=15
+
+Product with highest price: Laptop (₹50000)
+Total Inventory Value: ₹985,000
+```
+
+---
+
+#### Question 10
+Create a dictionary of five students and their marks:
+Alice: 85, Bob: 92, Charlie: 78, David: 88, Emma: 95
+
+Write a Python program to:
+- Find the student with the highest marks.
+- Find the student with the lowest marks.
+- Calculate the average marks.
+- Display students who scored more than 85.
+
+**Solution:**
+```python
+student_marks = {
+    "Alice": 85,
+    "Bob": 92,
+    "Charlie": 78,
+    "David": 88,
+    "Emma": 95
+}
+
+# Highest marks
+top_student = max(student_marks.items(), key=lambda x: x[1])
+print(f"Highest marks: {top_student[0]} with {top_student[1]}")
+
+# Lowest marks
+lowest_student = min(student_marks.items(), key=lambda x: x[1])
+print(f"Lowest marks: {lowest_student[0]} with {lowest_student[1]}")
+
+# Average marks
+average = sum(student_marks.values()) / len(student_marks)
+print(f"Average marks: {average:.2f}")
+
+# Students with marks > 85
+print("\nStudents with marks > 85:")
+for name, marks in student_marks.items():
+    if marks > 85:
+        print(f"  {name}: {marks}")
+```
+
+**Output:**
+```
+Highest marks: Emma with 95
+Lowest marks: Charlie with 78
+Average marks: 87.60
+
+Students with marks > 85:
+  Bob: 92
+  David: 88
+  Emma: 95
+```
+
+---
+
+**Note:** All solutions use NumPy for 3D array operations and standard Python dictionary methods. The notebook `assignment_2_basics_solution.ipynb` contains all working code.
