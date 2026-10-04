@@ -1,0 +1,290 @@
+LINEAR ALGEBRA ASSIGNMENT - ANSWER SHEET
+==========================================
+
+Source: Assignment 2 - Linear Algebra problems.pdf (8 pages, 23 questions)
+
+---
+
+### Part A – Scalars, Vectors and Matrices
+
+#### Question 1
+Identify whether each of the following is a Scalar, Vector, Matrix, or Tensor.
+
+a) 5
+**Answer: Scalar** - A single number
+
+b) [2, 4, 6]ᵀ (column vector)
+**Answer: Vector** - 1D array (3×1)
+
+c) [1, 2, 3, 4] (row vector)
+**Answer: Vector** - 1D array (1×4)
+
+d) A colour image of size 256 × 256 × 3
+**Answer: Tensor** - 3D array (height × width × channels)
+
+---
+
+#### Question 2
+Determine the dimensions of the following matrices.
+
+a) [1, 2, 3, 4, 5, 6] (row vector)
+**Answer: 1 × 6** (1 row, 6 columns)
+
+b) [5, 8, 9, 2]ᵀ (column vector)
+**Answer: 4 × 1** (4 rows, 1 column)
+
+c) [1, 2, 3, 4, 5, 6] (row vector - same as a)
+**Answer: 1 × 6** (1 row, 6 columns)
+
+---
+
+#### Question 3
+Given A = [2, 5, 3, 7] and B = [4, 1, 6, 8] (both 2×2 matrices)
+A = [[2, 5], [3, 7]], B = [[4, 1], [6, 8]]
+
+Find:
+- A + B
+- A - B
+- 2A
+
+**Solution:**
+```
+A + B = [[2+4, 5+1], [3+6, 7+8]] = [[6, 6], [9, 15]]
+A - B = [[2-4, 5-1], [3-6, 7-8]] = [[-2, 4], [-3, -1]]
+2A    = [[4, 10], [6, 14]]
+```
+
+---
+
+#### Question 4
+Find the transpose of the matrix A = [2, 4, 6, 8, 10, 12] (2×3 matrix)
+A = [[2, 4, 6], [8, 10, 12]]
+
+**Answer:**
+Aᵀ = [[2, 8], [4, 10], [6, 12]] (3×2 matrix)
+
+---
+
+#### Question 5
+Find the transpose of [[1, 3], [2, 5], [4, 6]] (3×2 matrix)
+
+**Answer:**
+[[1, 2, 4], [3, 5, 6]] (2×3 matrix)
+
+---
+
+### Part B – Matrix Multiplication
+
+#### Question 6
+Multiply A = [1, 2, 3, 4] and B = [5, 6, 7, 8] (both 2×2)
+A = [[1, 2], [3, 4]], B = [[5, 6], [7, 8]]
+
+**Solution:**
+AB = [[1×5+2×7, 1×6+2×8], [3×5+4×7, 3×6+4×8]]
+   = [[5+14, 6+16], [15+28, 18+32]]
+   = [[19, 22], [43, 50]]
+
+---
+
+#### Question 7
+Determine whether the following matrix multiplications are possible. If possible, write dimensions of resulting matrix.
+
+a) (2 × 3)(3 × 4)
+**Answer: Possible** - Inner dimensions match (3=3). Result: **2 × 4**
+
+b) (3 × 2)(4 × 3)
+**Answer: Not possible** - Inner dimensions don't match (2≠4)
+
+c) (4 × 2)(2 × 5)
+**Answer: Possible** - Inner dimensions match (2=2). Result: **4 × 5**
+
+d) (5 × 4)(4 × 2)
+**Answer: Possible** - Inner dimensions match (4=4). Result: **5 × 2**
+
+---
+
+#### Question 8
+Given A = [2, 1, 4, 3] and B = [5, 6, 7, 8] (both 2×2)
+A = [[2, 1], [4, 3]], B = [[5, 6], [7, 8]]
+
+Find AB.
+
+**Solution:**
+AB = [[2×5+1×7, 2×6+1×8], [4×5+3×7, 4×6+3×8]]
+   = [[10+7, 12+8], [20+21, 24+24]]
+   = [[17, 20], [41, 48]]
+
+---
+
+#### Question 9
+Verify whether matrix multiplication is commutative.
+Compute AB and BA where A = [1, 2, 3, 4] and B = [5, 6, 7, 8]
+A = [[1, 2], [3, 4]], B = [[5, 6], [7, 8]]
+
+**Solution:**
+AB = [[19, 22], [43, 50]] (from Question 6)
+
+BA = [[5×1+6×3, 5×2+6×4], [7×1+8×3, 7×2+8×4]]
+   = [[5+18, 10+24], [7+24, 14+32]]
+   = [[23, 34], [31, 46]]
+
+**Conclusion:** AB ≠ BA. Matrix multiplication is **not commutative** in general.
+
+---
+
+### Part C – Vector Operations
+
+#### Question 10
+Find the magnitude of the vector x = [3, 4]ᵀ
+
+**Solution:**
+||x|| = √(3² + 4²) = √(9 + 16) = √25 = **5**
+
+---
+
+#### Question 11
+Find the magnitude of y = [2, 5, 6]ᵀ
+
+**Solution:**
+||y|| = √(2² + 5² + 6²) = √(4 + 25 + 36) = √65 ≈ **8.06**
+
+---
+
+#### Question 12
+Compute the dot product of x = [2, 4, 1]ᵀ and y = [5, 2, 3]ᵀ
+
+**Solution:**
+x·y = 2×5 + 4×2 + 1×3 = 10 + 8 + 3 = **21**
+
+---
+
+#### Question 13
+Determine whether the following vectors are orthogonal.
+u = [2, 1]ᵀ, v = [1, -2]ᵀ
+
+**Solution:**
+u·v = 2×1 + 1×(-2) = 2 - 2 = 0
+**Answer: Yes, orthogonal** (dot product = 0)
+
+---
+
+#### Question 14
+Normalize the vector x = [6, 8]ᵀ
+
+**Solution:**
+||x|| = √(6² + 8²) = √(36 + 64) = √100 = 10
+Normalized x = x/||x|| = [6/10, 8/10] = **[0.6, 0.8]ᵀ**
+
+---
+
+#### Question 15
+Find the Euclidean distance between A = (2, 3) and B = (8, 11)
+
+**Solution:**
+d = √((8-2)² + (11-3)²) = √(6² + 8²) = √(36 + 64) = √100 = **10**
+
+---
+
+### Part D – Vector Spaces and Span
+
+#### Question 16
+Determine whether the following vectors are linearly independent.
+v₁ = [1, 2]ᵀ, v₂ = [2, 4]ᵀ
+
+**Solution:**
+v₂ = 2 × v₁ (v₂ is a scalar multiple of v₁)
+**Answer: Linearly dependent** - one vector is a scalar multiple of the other.
+
+---
+
+#### Question 17
+Determine whether v = [5, 7]ᵀ belongs to the span of v₁ = [1, 1]ᵀ and v₂ = [2, 1]ᵀ
+
+**Solution:**
+Solve: a[1, 1] + b[2, 1] = [5, 7]
+a + 2b = 5
+a + b = 7
+
+Subtracting: b = -2, then a = 9
+Check: 9[1,1] + (-2)[2,1] = [9,9] + [-4,-2] = [5,7] ✓
+**Answer: Yes, v ∈ span{v₁, v₂}** (with coefficients a=9, b=-2)
+
+---
+
+#### Question 18
+Find a basis for ℝ²
+
+**Answer:** Standard basis: **{[1, 0]ᵀ, [0, 1]ᵀ}**
+Any two linearly independent vectors in ℝ² form a basis.
+
+---
+
+#### Question 19
+Find the rank of the matrix [[1, 2], [2, 4]]
+
+**Solution:**
+Row 2 = 2 × Row 1 → rows are linearly dependent
+Rank = **1** (only 1 linearly independent row)
+
+---
+
+#### Question 20
+Find the rank of [[1, 2], [3, 4]]
+
+**Solution:**
+det = 1×4 - 2×3 = 4 - 6 = -2 ≠ 0
+Matrix is full rank.
+Rank = **2** (both rows linearly independent)
+
+---
+
+### Part E – Orthogonality
+
+#### Question 21
+State whether the following pairs of vectors are orthogonal.
+
+a) [1, 0]ᵀ, [0, 1]ᵀ
+**Answer: Yes** - dot product = 1×0 + 0×1 = 0
+
+b) [3, 4]ᵀ, [4, -3]ᵀ
+**Answer: Yes** - dot product = 3×4 + 4×(-3) = 12 - 12 = 0
+
+c) [2, 5]ᵀ, [5, 2]ᵀ
+**Answer: No** - dot product = 2×5 + 5×2 = 10 + 10 = 20 ≠ 0
+
+---
+
+#### Question 22
+Find the cosine similarity between x = [1, 2]ᵀ and y = [3, 4]ᵀ. Interpret the result.
+
+**Solution:**
+x·y = 1×3 + 2×4 = 3 + 8 = 11
+||x|| = √(1² + 2²) = √5 ≈ 2.236
+||y|| = √(3² + 4²) = √25 = 5
+
+cos θ = (x·y) / (||x|| ||y||) = 11 / (√5 × 5) = 11 / (5√5) ≈ 11/11.18 ≈ **0.984**
+
+**Interpretation:** Cosine similarity ≈ 0.984 (close to 1) means the vectors are **very similar in direction** (small angle between them, θ ≈ 10.2°).
+
+---
+
+#### Question 23
+Explain, in your own words, the difference between:
+- Orthogonal vectors
+- Orthonormal vectors
+- A basis
+- A vector space
+
+**Answer:**
+
+**Orthogonal vectors:** Two vectors are orthogonal if their dot product is zero (they are perpendicular, angle = 90°).
+
+**Orthonormal vectors:** A set of vectors that are both orthogonal (pairwise dot product = 0) AND normalized (each has magnitude = 1). Orthonormal = orthogonal + unit length.
+
+**A basis:** A set of linearly independent vectors that span a vector space. Every vector in the space can be uniquely expressed as a linear combination of basis vectors. The number of vectors in a basis = dimension of the space.
+
+**A vector space:** A collection of vectors closed under addition and scalar multiplication, satisfying 8 axioms (associativity, commutativity, identity, inverse, distributivity, etc.). Examples: ℝⁿ, polynomial space, function space.
+
+---
+
+**Note:** All answers derived from the source PDF "Assignment 2 - Linear Algebra problems.pdf". Calculations shown with intermediate steps as instructed.
