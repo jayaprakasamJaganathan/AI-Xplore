@@ -1,0 +1,121 @@
+Assignment 3: IoT Sensor Data Analysis - Answers
+================================================
+
+Source: Day 4 Assignment 3.pdf
+Dataset: iot_sensor_data_raw.csv
+
+---
+
+Part A — Data Preparation
+
+1. Load the dataset.
+   → df = pd.read_csv('../data/iot_sensor_data_raw.csv')
+
+2. Display its dimensions and structure.
+   → df.shape, df.columns.tolist()
+
+3. Convert Timestamp into Pandas datetime.
+   → df['Timestamp'] = pd.to_datetime(df['Timestamp'], errors='coerce')
+
+4. Check whether the timestamps are correctly ordered.
+   → df['Timestamp'].is_monotonic_increasing
+   If not sorted: df = df.sort_values('Timestamp').reset_index(drop=True)
+
+5. Identify missing sensor readings.
+   → df[sensor_cols].isnull().sum()
+
+6. Calculate the percentage of missing values for each sensor.
+   → (df[sensor_cols].isnull().sum() / len(df)) * 100
+
+---
+
+Part B — Data Cleaning
+
+7. Handle missing sensor values using an appropriate method.
+   → Forward fill then backward fill: df[col] = df[col].ffill().bfill()
+
+8. Identify abnormal temperature readings.
+   → Use 3-sigma rule: mean ± 3*std
+   abnormal = df[(df['Temperature'] < lower_bound) | (df['Temperature'] > upper_bound)]
+
+9. Identify abnormal vibration readings.
+   → Same 3-sigma rule applied to Vibration column
+
+10. Identify machines with critically low battery levels.
+    → df[df['Battery'] < 20]
+    Group by Device_ID if available
+
+11. Explain how you decided what constitutes an abnormal reading.
+    → Temperature & Vibration: 3-sigma rule (mean ± 3σ) captures 99.7% of normal data
+    → Battery: Domain threshold (< 20%) based on IoT sensor standards
+    → Alternative: IQR method, domain-specific thresholds, ML anomaly detection
+
+---
+
+Part C — Time-Series Analysis
+
+12. Calculate the average temperature by hour.
+    → df['Hour'] = df['Timestamp'].dt.hour
+    → df.groupby('Hour')['Temperature'].mean()
+
+13. Calculate the average temperature for each device.
+    → df.groupby('Device_ID')['Temperature'].mean()
+
+14. Calculate the average vibration for each device.
+    → df.groupby('Device_ID')['Vibration'].mean()
+
+15. Find the maximum temperature recorded by each device.
+    → df.groupby('Device_ID')['Temperature'].max()
+
+16. Find the minimum battery level for each device.
+    → df.groupby('Device_ID')['Battery'].min()
+
+17. Determine which device has the highest average vibration.
+    → df.groupby('Device_ID')['Vibration'].mean().idxmax()
+
+18. Determine which factory has the highest average temperature.
+    → df.groupby('Factory')['Temperature'].mean().idxmax()
+
+---
+
+Part D — Create New Variables
+
+19. Create a Battery_Status column:
+    Battery >= 50 → Healthy
+    Battery 20-49 → Low
+    Battery < 20 → Critical
+    → df['Battery_Status'] = df['Battery'].apply(battery_status_function)
+
+---
+
+Part E — Advanced Analysis
+
+20. Create a Temperature_Status column.
+    → df['Temperature_Status'] = df['Temperature'].apply(temp_status_function)
+
+21. Create a Vibration_Status column.
+    → df['Vibration_Status'] = df['Vibration'].apply(vibration_status_function)
+
+22. Create an overall Machine_Health column:
+    Normal / Warning / Critical
+    based on appropriate sensor conditions.
+    → df['Machine_Health'] = df.apply(machine_health_function, axis=1)
+
+23. Find devices that have experienced critical conditions more than five times.
+    → critical_counts = df[df['Machine_Health'] == 'Critical'].groupby('Device_ID').size()
+    → critical_counts[critical_counts > 5]
+
+24. Find the factory with the highest number of abnormal sensor readings.
+    → abnormal = df[df['Machine_Health'].isin(['Warning', 'Critical'])]
+    → abnormal.groupby('Factory').size().idxmax()
+
+25. Calculate the percentage of time each device operates under warning/critical conditions.
+    → df.groupby('Device_ID')['Machine_Health'].apply(lambda x: (x.isin(['Warning', 'Critical']).mean() * 100))
+
+26. Identify the device that requires the highest maintenance priority.
+    → priority = df.groupby('Device_ID').agg(
+        critical_count=('Machine_Health', lambda x: (x == 'Critical').sum()),
+        warning_count=('Machine_Health', lambda x: (x == 'Warning').sum()),
+        avg_vibration=('Vibration', 'mean'),
+        min_battery=('Battery', 'min')
+    ).sort_values(['critical_count', 'warning_count', 'avg_vibration'], ascending=False).index[0]

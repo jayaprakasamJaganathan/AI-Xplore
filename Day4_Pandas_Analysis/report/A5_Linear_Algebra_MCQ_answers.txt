@@ -1,0 +1,211 @@
+Assignment 5: Linear Algebra MCQ - Answers
+==========================================
+
+Source: Assignment 5 LA MCQ.pdf
+
+---
+
+PART A — VECTORS
+
+1. Which of the following represents a vector?
+A. 25
+B. [2, 5, 7]
+C. 2 + 5 + 7
+D. x = 10
+Answer: B. [2, 5, 7]
+Explanation: A vector is an ordered list of numbers (array). 25 is a scalar, 2+5+7 is an expression, x=10 is an assignment.
+
+2. If x = [2, 3] and y = [4, 5], what is x + y?
+A. [6, 8]
+B. [8, 15]
+C. [2, 2]
+D. [4, 3]
+Answer: A. [6, 8]
+Explanation: Vector addition is element-wise: [2+4, 3+5] = [6, 8].
+
+3. If x = [2, 3], what is 4x?
+A. [6, 7]
+B. [8, 12]
+C. [2, 12]
+D. [4, 3]
+Answer: B. [8, 12]
+Explanation: Scalar multiplication: 4 × [2, 3] = [8, 12].
+
+4. What does the magnitude of a vector represent?
+A. Its direction
+B. Its length
+C. Its number of elements
+D. Its number of dimensions only
+Answer: B. Its length
+Explanation: Magnitude (norm) is the length of the vector.
+
+5. What is the Euclidean norm of the vector [3, 4]?
+A. 3
+B. 4
+C. 5
+D. 7
+Answer: C. 5
+Explanation: √(3² + 4²) = √(9+16) = √25 = 5.
+
+6. Two vectors are orthogonal when:
+A. They have the same magnitude
+B. Their dot product is zero
+C. Their values are identical
+D. Their magnitudes are zero
+Answer: B. Their dot product is zero
+Explanation: Orthogonal vectors have dot product = 0.
+
+7. What is the dot product of [1, 2] and [3, 4]?
+A. 5
+B. 7
+C. 10
+D. 11
+Answer: D. 11
+Explanation: 1×3 + 2×4 = 3 + 8 = 11.
+
+8. If two non-zero vectors have a dot product of zero, they are:
+A. Parallel
+B. Orthogonal
+Answer: B. Orthogonal
+Explanation: Dot product = 0 means orthogonal (perpendicular).
+
+---
+
+PART B — MATRICES
+
+9. What is the shape of a matrix with 3 rows and 4 columns?
+A. (4, 3)
+B. (3, 4)
+C. (3, 3)
+D. (4, 4)
+Answer: B. (3, 4)
+Explanation: Shape is (rows, columns).
+
+10. If A is a 2×3 matrix and B is a 3×2 matrix, what is the shape of AB?
+A. 2×2
+B. 3×3
+C. 2×3
+D. 3×2
+Answer: A. 2×2
+Explanation: (2×3) × (3×2) = (2×2).
+
+11. Matrix multiplication is:
+A. Always commutative
+B. Never commutative
+C. Sometimes commutative
+D. Only commutative for square matrices
+Answer: B. Never commutative
+Explanation: In general, AB ≠ BA.
+
+12. What is the identity matrix?
+A. A matrix with all zeros
+B. A matrix with all ones
+C. A square matrix with 1s on diagonal and 0s elsewhere
+D. A matrix with random values
+Answer: C. A square matrix with 1s on diagonal and 0s elsewhere
+
+13. If A is a square matrix and A⁻¹ exists, then A × A⁻¹ = ?
+A. 0
+B. A
+C. I (Identity matrix)
+D. A²
+Answer: C. I (Identity matrix)
+
+14. The determinant of a 2×2 matrix [[a, b], [c, d]] is:
+A. ad + bc
+B. ad - bc
+C. ab - cd
+D. ac - bd
+Answer: B. ad - bc
+
+15. A matrix is invertible if and only if its determinant is:
+A. Zero
+B. Non-zero
+C. Positive
+D. Negative
+Answer: B. Non-zero
+
+16. The transpose of a matrix swaps:
+A. Rows and columns
+B. Diagonal elements
+C. First and last row
+D. Positive and negative values
+Answer: A. Rows and columns
+
+---
+
+PART C — EIGENVALUES & EIGENVECTORS
+
+17. For a square matrix A, if Av = λv for a non-zero vector v, then:
+A. v is an eigenvector and λ is an eigenvalue
+B. v is an eigenvalue and λ is an eigenvector
+C. v is the inverse of A
+D. λ is the determinant of A
+Answer: A. v is an eigenvector and λ is an eigenvalue
+
+18. The eigenvalues of a diagonal matrix are:
+A. All zeros
+B. The diagonal elements
+C. All ones
+D. The trace of the matrix
+Answer: B. The diagonal elements
+
+19. The trace of a matrix equals:
+A. Sum of all elements
+B. Product of diagonal elements
+C. Sum of diagonal elements
+D. Sum of eigenvalues
+Answer: C. Sum of diagonal elements (also equals sum of eigenvalues)
+
+20. If λ is an eigenvalue of A, then λ² is an eigenvalue of:
+A. A²
+B. A⁻¹
+C. Aᵀ
+D. 2A
+Answer: A. A²
+
+21. The rank of a matrix equals:
+A. Number of non-zero eigenvalues
+B. Number of rows
+C. Number of columns
+D. Determinant
+Answer: A. Number of non-zero eigenvalues (for diagonalizable matrices)
+
+---
+
+PART D — LINEAR TRANSFORMATIONS
+
+22. A linear transformation T satisfies:
+A. T(u + v) = T(u) + T(v) and T(cv) = cT(v)
+B. T(u + v) = T(u)T(v)
+C. T(cv) = c + T(v)
+D. T(u + v) = T(u) - T(v)
+Answer: A. T(u + v) = T(u) + T(v) and T(cv) = cT(v)
+
+23. The matrix representation of a linear transformation depends on:
+A. The choice of basis
+B. The determinant
+C. The trace
+D. The rank only
+Answer: A. The choice of basis
+
+23. A transformation is invertible if and only if its matrix is:
+A. Symmetric
+B. Invertible
+C. Diagonal
+D. Orthogonal
+Answer: B. Invertible
+
+24. The composition of two linear transformations corresponds to:
+A. Matrix addition
+B. Matrix multiplication
+C. Element-wise multiplication
+D. Matrix transpose
+Answer: B. Matrix multiplication
+
+25. A projection matrix P satisfies:
+A. P² = P
+B. P² = I
+C. P² = 0
+D. P² = 2P
+Answer: A. P² = P

@@ -1,0 +1,200 @@
+Assignment 8: Probability vs Statistics MCQ - Answers
+====================================================
+
+Source: Assignment 8 PROBABILITY vs STATISTICS.pdf
+
+---
+
+1. You know that a fair die has six equally likely outcomes. You want to calculate the probability of getting a 6. This is an example of:
+A. Statistics
+B. Probability
+C. Regression
+D. Sampling
+Answer: B. Probability
+Explanation: Using a known model (fair die) to predict outcome probability.
+
+2. You roll a die 1,000 times and record the results. You notice that the number 6 appeared much more frequently than expected. You want to determine whether the die may be biased. This is primarily:
+A. Probability
+B. Statistics
+C. Linear Algebra
+D. Calculus
+Answer: B. Statistics
+Explanation: Using observed data to infer properties of the underlying process.
+
+3. Which statement best describes Probability?
+A. Using observed data to estimate unknown characteristics
+B. Using a known model or assumptions to reason about possible outcomes
+C. Organizing data into tables
+D. Calculating averages from collected data
+Answer: B. Using a known model or assumptions to reason about possible outcomes
+Explanation: Probability = forward reasoning from model to outcomes.
+
+4. Which statement best describes Statistics?
+A. Predicting possible outcomes from a known probability model
+B. Using observed data to understand or estimate an underlying process
+C. Generating random numbers
+D. Calculating only probabilities between 0 and 1
+Answer: B. Using observed data to understand or estimate an underlying process
+Explanation: Statistics = backward reasoning from data to model.
+
+5. A company knows that historically 2% of its products are defective. It wants to estimate how many defective products might appear in the next 10,000 products.
+This is primarily:
+A. Statistics
+B. Probability
+C. Data cleaning
+D. Visualization
+Answer: B. Probability
+Explanation: Using known defect rate (model) to predict future outcomes.
+
+6. A company collects data from 10,000 products and finds that 250 are defective. It wants to estimate the defect rate of the production process.
+This is primarily:
+A. Probability
+B. Statistics
+C. Linear Algebra
+D. Optimization
+Answer: B. Statistics
+Explanation: Using observed data (250/10000) to estimate underlying defect rate.
+
+7. Which direction best represents Probability?
+A. Data → Model
+B. Model → Data
+C. Data → Data
+D. Model → Model
+Answer: B. Model → Data
+Explanation: Probability: known model → predict data/outcomes.
+
+8. Which direction best represents Statistics?
+A. Data → Model
+B. Model → Data
+C. Data → Data
+D. Model → Model
+Answer: A. Data → Model
+Explanation: Statistics: observed data → infer model/parameters.
+
+9. A weather forecast says there is a 70% chance of rain tomorrow. This statement comes from:
+A. Statistics
+B. Probability
+C. Both equally
+D. Neither
+Answer: B. Probability
+Explanation: Using meteorological models to predict future outcome probability.
+
+10. A meteorologist analyzes 50 years of rainfall data and concludes that the average July rainfall is 150mm. This is:
+A. Statistics
+B. Probability
+C. Both equally
+D. Neither
+Answer: A. Statistics
+Explanation: Analyzing historical data to estimate a population parameter.
+
+11. In a clinical trial, a new drug is tested on 1,000 patients. 850 recover. The estimated recovery rate is 85%. This is:
+A. Statistics
+B. Probability
+C. Both equally
+D. Neither
+Answer: A. Statistics
+Explanation: Using sample data (850/1000) to estimate population recovery rate.
+
+12. Based on the 85% recovery rate from the clinical trial, a doctor tells a new patient: "You have an 85% chance of recovery." This statement uses:
+A. Statistics
+B. Probability
+C. Both equally
+D. Neither
+Answer: B. Probability
+Explanation: Using estimated rate (from statistics) to predict individual outcome probability.
+
+13. A quality control engineer knows that a machine produces 5% defective items. She wants to calculate the probability that in a batch of 20 items, exactly 2 are defective. This uses:
+A. Statistics
+B. Probability
+C. Both equally
+D. Neither
+Answer: B. Probability
+Explanation: Using known defect rate (p=0.05) with binomial distribution to predict outcome.
+
+14. The same engineer collects data from 50 batches and finds the actual defect rate is 7%. She updates her model. This is:
+A. Statistics
+B. Probability
+C. Both equally
+D. Neither
+Answer: A. Statistics
+Explanation: Using observed data to update the estimated parameter (from 5% to 7%).
+
+15. A data scientist builds a model that predicts customer churn with 90% accuracy. The 90% accuracy is measured on:
+A. Training data (Statistics)
+B. Test data (Statistics)
+C. Future predictions (Probability)
+D. Model assumptions (Probability)
+Answer: B. Test data (Statistics)
+Explanation: Accuracy measured on observed test data is a statistical evaluation.
+
+16. The same model is used to predict whether a specific customer will churn next month. The output "85% chance of churn" is:
+A. Statistics
+B. Probability
+C. Both equally
+D. Neither
+Answer: B. Probability
+Explanation: Applying the model to predict a specific future outcome.
+
+17. The relationship between Probability and Statistics is:
+A. They are completely separate fields
+B. Statistics uses probability theory as its mathematical foundation
+C. Probability uses statistical methods as its foundation
+D. They are the same thing
+Answer: B. Statistics uses probability theory as its mathematical foundation
+Explanation: Statistical inference relies on probability distributions, sampling theory, etc.
+
+18. Which of the following is a probabilistic statement?
+A. "The average height in our sample is 170cm"
+B. "There is a 95% chance the population mean is between 168cm and 172cm"
+C. "The sample standard deviation is 10cm"
+D. "We collected data from 100 people"
+Answer: B. "There is a 95% chance the population mean is between 168cm and 172cm"
+Explanation: Expresses uncertainty about a parameter using probability.
+
+19. Which of the following is a statistical statement?
+A. "If the coin is fair, the probability of 5 heads in a row is 3.125%"
+B. "The probability of rain tomorrow is 30%"
+C. "Based on our sample, we estimate the population mean is 50 with 95% CI [48, 52]"
+D. "The theoretical variance of this distribution is 25"
+Answer: C. "Based on our sample, we estimate the population mean is 50 with 95% CI [48, 52]"
+Explanation: Inference from sample data to population parameter.
+
+20. A casino knows that a slot machine has a 5% payout rate. A gambler plays 100 times. The casino's expected profit calculation uses:
+A. Statistics
+B. Probability
+C. Both equally
+D. Neither
+Answer: B. Probability
+Explanation: Using known payout rate (model) to compute expected outcomes.
+
+21. The casino analyzes 1,000,000 plays and finds the actual payout rate is 4.8%. They adjust the machine. This is:
+A. Statistics
+B. Probability
+C. Both equally
+D. Neither
+Answer: A. Statistics
+Explanation: Using observed data to update the estimated payout rate.
+
+22. In machine learning, training a model on labeled data is:
+A. Statistics
+B. Probability
+C. Both equally
+D. Neither
+Answer: A. Statistics
+Explanation: Learning patterns from observed data (statistical estimation).
+
+22. Using the trained model to predict on new data is:
+A. Statistics
+B. Probability
+C. Both equally
+D. Neither
+Answer: B. Probability
+Explanation: Applying learned model to predict outcomes (probabilistic inference).
+
+23. The fundamental difference:
+A. Probability: Model → Data (deductive)
+B. Statistics: Data → Model (inductive)
+C. Both A and B
+D. Neither
+Answer: C. Both A and B
+Explanation: Probability = forward/deductive (model→data). Statistics = backward/inductive (data→model).
